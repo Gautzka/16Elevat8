@@ -342,6 +342,8 @@ function saveDatePickerSessionStorage(date) {
 //     xhr.send(JSON.stringify(data));
 // }
 
+
+
 function bookClass(button) {
     console.log("Starting booking process");
     
@@ -395,14 +397,22 @@ function bookClass(button) {
         } else {
             console.error('bookClass - Error while booking:', xhr.status, response.errors.message);
             displayErrorMessage(button, response.errors.message);
-            errorAPICheckLogin();
+            errorAPICheckLogin(function(isValid) {
+                if (!isValid) {
+                    console.error('User is not logged in, redirecting to login page.');
+                }
+            });
         }
     };
 
     xhr.onerror = function() {
         console.error('bookClass - Network error while booking');
         displayErrorMessage(button, 'Network error occurred while booking.');
-        errorAPICheckLogin();
+        errorAPICheckLogin(function(isValid) {
+            if (!isValid) {
+                console.error('User is not logged in, redirecting to login page.');
+            }
+        });
     };
 
     xhr.send(JSON.stringify(data));
@@ -413,7 +423,6 @@ function displayErrorMessage(button, message) {
     clearErrorMessage(button); // Clear any previous error message
     var errorMessage = document.createElement('div');
     errorMessage.className = 'error-message';
-    errorMessage.style.color = 'red';
     errorMessage.textContent = message;
     button.parentNode.insertBefore(errorMessage, button.nextSibling);
 }
@@ -426,21 +435,11 @@ function clearErrorMessage(button) {
 }
 
 
-function displayErrorMessage(button, message) {
-    clearErrorMessage(button); // Clear any previous error message
-    var errorMessage = document.createElement('div');
-    errorMessage.className = 'error-message';
-    errorMessage.style.color = 'red';
-    errorMessage.textContent = message;
-    button.parentNode.insertBefore(errorMessage, button.nextSibling);
-}
-
-function clearErrorMessage(button) {
-    var nextElement = button.nextSibling;
-    if (nextElement && nextElement.className === 'error-message') {
-        nextElement.remove();
-    }
-}
+// // Ensure errorAPICheckLogin is defined
+// function errorAPICheckLogin() {
+//     // Add your error handling logic here
+//     console.log('Checking API login status...');
+// }
 
 
 function showInlineAttendees(content, item) {
@@ -1071,7 +1070,7 @@ function makeApiRequest(url, method, data, callback, retryAttempt = 0) {
 
 
 function errorAPICheckLogin(callback) {
-    console.log('errorAPICheckLogin - fucntion called')
+    console.log('errorAPICheckLogin - function called')
     validateLogin(function(isValid) {
         if (isValid) {
             console.log('errorAPICheckLogin - login validated')
