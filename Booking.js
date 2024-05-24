@@ -345,7 +345,7 @@ function saveDatePickerSessionStorage(date) {
 
 
 function bookClass(button) {
-    console.log("Starting booking process");
+    // console.log("Starting booking process");
     
     var classScheduleId = button.getAttribute('data-class-schedule-id');
     var classDateTime = button.getAttribute('data-class-date');
@@ -353,11 +353,11 @@ function bookClass(button) {
     var userId = localStorage.getItem('userId');
     var accessToken = localStorage.getItem('access_token');
     
-    console.log("Class Schedule ID:", classScheduleId);
-    console.log("Class DateTime:", classDateTime);
-    console.log("Class Name:", className);
-    console.log("User ID:", userId);
-    console.log("Access Token:", accessToken);
+    // console.log("Class Schedule ID:", classScheduleId);
+    // console.log("Class DateTime:", classDateTime);
+    // console.log("Class Name:", className);
+    // console.log("User ID:", userId);
+    // console.log("Access Token:", accessToken);
 
     var bookUrl = "https://crossfit168.clubfit.net.au/api/v1/booking/book-class-v2";
     var data = {
@@ -369,8 +369,8 @@ function bookClass(button) {
         onBehalfBookFor: ""
     };
     
-    console.log("Booking URL:", bookUrl);
-    console.log("Request Data:", data);
+    // console.log("Booking URL:", bookUrl);
+    // console.log("Request Data:", data);
 
     var xhr = new XMLHttpRequest();
     xhr.open('POST', bookUrl, true);
@@ -379,9 +379,9 @@ function bookClass(button) {
     xhr.setRequestHeader('Authorization', 'Bearer ' + accessToken);
     
     xhr.onload = function() {
-        console.log("Response Status:", xhr.status);
-        console.log("Response Headers:", xhr.getAllResponseHeaders());
-        console.log("Response Text:", xhr.responseText);
+        // console.log("Response Status:", xhr.status);
+        // console.log("Response Headers:", xhr.getAllResponseHeaders());
+        // console.log("Response Text:", xhr.responseText);
         
         var response;
         try {
@@ -393,10 +393,10 @@ function bookClass(button) {
 
         if (xhr.status >= 200 && xhr.status < 300 && response.statusCode === 200) {
             fetchAndDisplayClassesAvailable();
-            clearErrorMessage(button); // Clear any previous error message if the booking is successful
+            // clearErrorMessage(button); // Clear any previous error message if the booking is successful
         } else {
             console.error('bookClass - Error while booking:', xhr.status, response.errors.message);
-            displayErrorMessage(button, response.errors.message);
+            displayErrorModal(response.errors.message);
             errorAPICheckLogin(function(isValid) {
                 if (!isValid) {
                     console.error('User is not logged in, redirecting to login page.');
@@ -407,7 +407,7 @@ function bookClass(button) {
 
     xhr.onerror = function() {
         console.error('bookClass - Network error while booking');
-        displayErrorMessage(button, 'Network error occurred while booking.');
+        displayErrorModal('Network error occurred while booking.');
         errorAPICheckLogin(function(isValid) {
             if (!isValid) {
                 console.error('User is not logged in, redirecting to login page.');
@@ -416,8 +416,12 @@ function bookClass(button) {
     };
 
     xhr.send(JSON.stringify(data));
-    console.log("Booking request sent");
+    // console.log("Booking request sent");
 }
+
+
+
+
 
 function displayErrorMessage(button, message) {
     clearErrorMessage(button); // Clear any previous error message
