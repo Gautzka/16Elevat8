@@ -193,7 +193,7 @@ function fetchWorkoutImage() {
       var imgElement = document.getElementById("day-picture");
 
       if (imgElement) {
-        imgElement.src = imageUrl;\
+        imgElement.src = imageUrl;
         imgElement.style.visibility = 'visible';
       } else {
         console.error('Element with ID "day-picture" not found.');
