@@ -214,12 +214,8 @@ function setupSignoutButton() {
 }
 
 document.addEventListener("DOMContentLoaded", function() {
-  console.log("Calling fetchMembershipInfo")
   fetchMembershipInfo();
-  console.log("Calling fetchUserProfile")
   fetchUserProfile();
-  console.log("Calling fetchWorkoutImage")
   fetchWorkoutImage();
-  console.log("Calling setupSignoutButton")
   setupSignoutButton();
 });
