@@ -190,11 +190,24 @@ function fetchWorkoutImage() {
   };
 
   makeApiRequest(apiUrl, 'POST', data, function(response) {
-    var imageUrl = response.payload.imageUrl;
-    var imgElement = document.getElementById("day-picture");
-    imgElement.src = imageUrl;
+    console.log('API Response:', response);
+
+    if (response && response.payload && response.payload.imageUrl) {
+      var imageUrl = response.payload.imageUrl;
+      var imgElement = document.getElementById("day-picture");
+
+      if (imgElement) {
+        imgElement.src = imageUrl;
+        console.log('Workout image URL set:', imageUrl);
+      } else {
+        console.error('Element with ID "day-picture" not found.');
+      }
+    } else {
+      console.log('Image URL not found in the response.');
+    }
   });
 }
+
 
 
 
