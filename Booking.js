@@ -302,12 +302,52 @@ function saveDatePickerSessionStorage(date) {
 
 
 
+// function bookClass(button) {
+//     var classScheduleId = button.getAttribute('data-class-schedule-id');
+//     var classDateTime = button.getAttribute('data-class-date');
+//     var className = button.getAttribute('data-class-name');
+//     var userId = localStorage.getItem('userId');
+//    // var authToken = localStorage.getItem('authToken'); V1
+//     var accessToken = localStorage.getItem('access_token');
+
+//     var bookUrl = "https://crossfit168.clubfit.net.au/api/v1/booking/book-class-v2";
+//     var data = {
+//         classScheduleId: classScheduleId,
+//         classDateTime: classDateTime,
+//         className: className,
+//         userId: userId,
+//         onBehalfBookingReference: "",
+//         onBehalfBookFor: ""
+//     };
+
+//     var xhr = new XMLHttpRequest();
+//     xhr.open('POST', bookUrl, true);
+//     xhr.setRequestHeader('Content-Type', 'application/json');
+//     xhr.setRequestHeader('Accept', 'application/json');
+//     xhr.setRequestHeader('Authorization', 'Bearer ' + accessToken);
+//     xhr.onload = function() {
+//         if (xhr.status >= 200 && xhr.status < 300) {
+//             fetchAndDisplayClassesAvailable();
+//         } else {
+//             console.error('bookClass - Error while booking:', xhr.status);
+//             errorAPICheckLogin();
+//         }
+//     };
+
+//     xhr.onerror = function() {
+//         console.error('bookClass - Network error while booking');
+//         errorAPICheckLogin();
+//     };
+
+//     xhr.send(JSON.stringify(data));
+// }
+
+
 function bookClass(button) {
     var classScheduleId = button.getAttribute('data-class-schedule-id');
     var classDateTime = button.getAttribute('data-class-date');
     var className = button.getAttribute('data-class-name');
     var userId = localStorage.getItem('userId');
-   // var authToken = localStorage.getItem('authToken'); V1
     var accessToken = localStorage.getItem('access_token');
 
     var bookUrl = "https://crossfit168.clubfit.net.au/api/v1/booking/book-class-v2";
@@ -328,19 +368,40 @@ function bookClass(button) {
     xhr.onload = function() {
         if (xhr.status >= 200 && xhr.status < 300) {
             fetchAndDisplayClassesAvailable();
+            clearErrorMessage(button); // Clear any previous error message if the booking is successful
         } else {
             console.error('bookClass - Error while booking:', xhr.status);
+            var response = JSON.parse(xhr.responseText);
+            displayErrorMessage(button, response.errors.message);
             errorAPICheckLogin();
         }
     };
 
     xhr.onerror = function() {
         console.error('bookClass - Network error while booking');
+        displayErrorMessage(button, 'Network error occurred while booking.');
         errorAPICheckLogin();
     };
 
     xhr.send(JSON.stringify(data));
 }
+
+function displayErrorMessage(button, message) {
+    clearErrorMessage(button); // Clear any previous error message
+    var errorMessage = document.createElement('div');
+    errorMessage.className = 'error-message';
+    errorMessage.style.color = 'red';
+    errorMessage.textContent = message;
+    button.parentNode.insertBefore(errorMessage, button.nextSibling);
+}
+
+function clearErrorMessage(button) {
+    var nextElement = button.nextSibling;
+    if (nextElement && nextElement.className === 'error-message') {
+        nextElement.remove();
+    }
+}
+
 
 function showInlineAttendees(content, item) {
     var attendees = item.querySelector('.attendees');
