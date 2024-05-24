@@ -48,32 +48,6 @@ function makeApiRequest(url, method, data, callback, retryAttempt = 0) {
   }
 }
 
-// // Dedicated function for making image API requests
-// function makeImageApiRequest(url, method, data, headers, callback, retryAttempt = 0) {
-//   fetch(url, {
-//     method: method,
-//     headers: headers,
-//     body: JSON.stringify(data)
-//   })
-//   .then(response => response.json())
-//   .then(data => {
-//     callback(data);
-//   })
-//   .catch(error => {
-//     console.error('Error fetching image URL:', error);
-//     if (retryAttempt < 1) { // Prevent infinite loop, retry only once
-//       errorAPICheckLogin(function(retry) {
-//         if (retry) {
-//           makeImageApiRequest(url, method, data, headers, callback, retryAttempt + 1);
-//         }
-//       });
-//     } else {
-//       console.error('makeImageApiRequest - Retried request failed:', error);
-//     }
-//   });
-// }
-
-
 
 
 
@@ -195,25 +169,17 @@ function updateUserName(firstName, lastName) {
 }
 
 
-
 function fetchWorkoutImage() {
   var userId = localStorage.getItem('userId');
-  var accessToken = localStorage.getItem('access_token');
+  // var accessToken = localStorage.getItem('access_token');
 
   var today = new Date();
   var year = today.getFullYear();
   var month = String(today.getMonth() + 1).padStart(2, '0');
   var day = String(today.getDate()).padStart(2, '0');
   var selectedDate = `${year}-${month}-${day}`;
-  
+
   var apiUrl = "https://crossfit168.clubfit.net.au/api/v1/workout/myworkout";
-  var headers = {
-    "Host": "crossfit168.clubfit.net.au",
-    "accept": "application/json",
-    "content-type": "application/json",
-    "accept-language": "en-AU,en;q=0.9",
-    "authorization": `bearer ${accessToken}`
-  };
   var data = {
     "userId": userId,
     "clubId": 2,
@@ -223,23 +189,12 @@ function fetchWorkoutImage() {
     "imageWidth": 0
   };
 
-  fetch(apiUrl, {
-    method: 'POST',
-    headers: headers,
-    body: JSON.stringify(data)
-  })
-  .then(response => response.json())
-  .then(data => {
-    var imageUrl = data.payload.imageUrl;
+  makeApiRequest(apiUrl, 'POST', data, function(response) {
+    var imageUrl = response.payload.imageUrl;
     var imgElement = document.getElementById("day-picture");
     imgElement.src = imageUrl;
-  })
-  .catch(error => {
-    console.error('Error fetching image URL:', error);
   });
 }
-
-
 
 
 
