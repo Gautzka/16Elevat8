@@ -47,3 +47,4 @@ function getIconSrc(iconId, isCurrentPage) {
 function updateIconSrc(icon, newSrc) {
     icon.src = `${newSrc}?t=${new Date().getTime()}`;
 }
+
