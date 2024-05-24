@@ -381,18 +381,19 @@ function bookClass(button) {
         console.log("Response Headers:", xhr.getAllResponseHeaders());
         console.log("Response Text:", xhr.responseText);
         
-        if (xhr.status >= 200 && xhr.status < 300) {
+        var response;
+        try {
+            response = JSON.parse(xhr.responseText);
+        } catch (e) {
+            console.error('Failed to parse response JSON:', e);
+            response = { errors: { message: 'Unknown error occurred' } };
+        }
+
+        if (xhr.status >= 200 && xhr.status < 300 && response.statusCode === 200) {
             fetchAndDisplayClassesAvailable();
             clearErrorMessage(button); // Clear any previous error message if the booking is successful
         } else {
-            console.error('bookClass - Error while booking:', xhr.status);
-            var response;
-            try {
-                response = JSON.parse(xhr.responseText);
-            } catch (e) {
-                console.error('Failed to parse response JSON:', e);
-                response = { errors: { message: 'Unknown error occurred' } };
-            }
+            console.error('bookClass - Error while booking:', xhr.status, response.errors.message);
             displayErrorMessage(button, response.errors.message);
             errorAPICheckLogin();
         }
@@ -408,7 +409,21 @@ function bookClass(button) {
     console.log("Booking request sent");
 }
 
+function displayErrorMessage(button, message) {
+    clearErrorMessage(button); // Clear any previous error message
+    var errorMessage = document.createElement('div');
+    errorMessage.className = 'error-message';
+    errorMessage.style.color = 'red';
+    errorMessage.textContent = message;
+    button.parentNode.insertBefore(errorMessage, button.nextSibling);
+}
 
+function clearErrorMessage(button) {
+    var nextElement = button.nextSibling;
+    if (nextElement && nextElement.className === 'error-message') {
+        nextElement.remove();
+    }
+}
 
 
 function displayErrorMessage(button, message) {
