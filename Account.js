@@ -170,6 +170,8 @@ function fetchWorkoutImage() {
   var day = String(today.getDate()).padStart(2, '0');
   var selectedDate = `${year}-${month}-${day}`;
 
+  console.log('Selected date for workout image:', selectedDate);
+
   var apiUrl = "https://crossfit168.clubfit.net.au/api/v1/workout/myworkout";
   var data = {
     "userId": userId,
@@ -180,12 +182,28 @@ function fetchWorkoutImage() {
     "imageWidth": 0
   };
 
+  console.log('API URL:', apiUrl);
+  console.log('Request Data:', JSON.stringify(data));
+
   makeApiRequest(apiUrl, 'POST', data, function(response) {
-    var imageUrl = response.payload.imageUrl;
-    var imgElement = document.getElementById("day-picture");
-    imgElement.src = imageUrl;
+    if (response && response.payload && response.payload.imageUrl) {
+      var imageUrl = response.payload.imageUrl;
+      var imgElement = document.getElementById("day-picture");
+
+      if (imgElement) {
+        imgElement.src = imageUrl;
+        console.log('Workout image URL set:', imageUrl);
+      } else {
+        console.error('Element with ID "day-picture" not found.');
+      }
+    } else {
+      console.error('Invalid response or imageUrl not found in response:', response);
+    }
   });
 }
+
+
+
 
 function setupSignoutButton() {
   var signoutButton = document.getElementById("signout-button");
