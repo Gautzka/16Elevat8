@@ -1,8 +1,8 @@
 // Dedicated function for making API requests
 function makeApiRequest(url, method, data, callback, retryAttempt = 0) {
 
-  console.log("Calling makeApiRequest " + url)
-
+  console.log("Calling makeApiRequest URL " + url)
+  console.log("Calling makeApiRequest data " + data)
   var accessToken = localStorage.getItem('access_token');
   var xhr = new XMLHttpRequest();
   xhr.open(method, url, true);
@@ -11,6 +11,7 @@ function makeApiRequest(url, method, data, callback, retryAttempt = 0) {
   xhr.setRequestHeader('Authorization', 'Bearer ' + accessToken);
   xhr.onload = function() {
     if (xhr.status === 200) {
+      console.log("Request OK: " + url)
       callback(JSON.parse(xhr.responseText));
     } else {
       console.error('Error fetching information:', xhr.status);
@@ -21,6 +22,7 @@ function makeApiRequest(url, method, data, callback, retryAttempt = 0) {
           }
         });
       } else {
+        console.log("Request KO: " + url)
         console.error('makeApiRequest - Retried request failed:', xhr.status);
       }
     }
