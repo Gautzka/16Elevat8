@@ -1,5 +1,8 @@
 // Dedicated function for making API requests
 function makeApiRequest(url, method, data, callback, retryAttempt = 0) {
+
+  console.log("Calling makeApiRequest " + url)
+
   var accessToken = localStorage.getItem('access_token');
   var xhr = new XMLHttpRequest();
   xhr.open(method, url, true);
@@ -214,8 +217,12 @@ function setupSignoutButton() {
 }
 
 document.addEventListener("DOMContentLoaded", function() {
+  console.log("Calling fetchMembershipInfo")
   fetchMembershipInfo();
+  console.log("Calling fetchUserProfile")
   fetchUserProfile();
+  console.log("Calling fetchWorkoutImage")
   fetchWorkoutImage();
+  console.log("Calling setupSignoutButton")
   setupSignoutButton();
 });
