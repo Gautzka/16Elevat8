@@ -105,18 +105,28 @@ function displayMembershipData(response) {
   var membershipName = response.membershipName;
   var nextPaymentDate = response.contractTypeDetails.nextPaymentDate;
   var nextPaymentAmount = response.contractTypeDetails.nextPaymentAmount !== undefined ? response.contractTypeDetails.nextPaymentAmount : 0;
-  
   var membershipInfoElement = document.getElementById('membership-info');
 
+  
   if (membershipInfoElement) {
-    membershipInfoElement.innerHTML = `
+    var membershipHTML = `
       <div class="w-richtext">
         <p><strong>Member since:</strong>&nbsp;${membershipStartDate}</p>
         <p><strong>My membership:</strong>&nbsp;${membershipName}</p>
         <p><strong>Next payment:</strong>&nbsp;${nextPaymentDate}</p>
         <p><strong>Amount:</strong>&nbsp;$${nextPaymentAmount.toFixed(2)}</p>
-      </div>
     `;
+
+    if (membershipName.toLowerCase().includes('pass')) {
+      var sessionRemaining = response.sessionRemaining;
+      var costPerSession = response.costPerSession !== undefined ? response.costPerSession : 0;
+      membershipHTML += `
+        <p><strong>Sessions remaining:</strong>&nbsp;${sessionRemaining}</p>
+      `;
+    }
+
+    membershipHTML += `</div>`;
+    membershipInfoElement.innerHTML = membershipHTML;
   } else {
     console.error('Element with ID "membership-info" not found.');
   }
