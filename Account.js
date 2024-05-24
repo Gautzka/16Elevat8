@@ -48,6 +48,35 @@ function makeApiRequest(url, method, data, callback, retryAttempt = 0) {
   }
 }
 
+// Dedicated function for making image API requests
+function makeImageApiRequest(url, method, data, headers, callback, retryAttempt = 0) {
+  fetch(url, {
+    method: method,
+    headers: headers,
+    body: JSON.stringify(data)
+  })
+  .then(response => response.json())
+  .then(data => {
+    callback(data);
+  })
+  .catch(error => {
+    console.error('Error fetching image URL:', error);
+    if (retryAttempt < 1) { // Prevent infinite loop, retry only once
+      errorAPICheckLogin(function(retry) {
+        if (retry) {
+          makeImageApiRequest(url, method, data, headers, callback, retryAttempt + 1);
+        }
+      });
+    } else {
+      console.error('makeImageApiRequest - Retried request failed:', error);
+    }
+  });
+}
+
+
+
+
+
 function errorAPICheckLogin(callback) {
   console.log('errorAPICheckLogin - function called');
   // call validateLogin
@@ -165,9 +194,16 @@ function updateUserName(firstName, lastName) {
   }
 }
 
+
+
 function fetchWorkoutImage() {
   var userId = localStorage.getItem('userId');
   var accessToken = localStorage.getItem('access_token');
+
+  if (!userId || !accessToken) {
+    console.error('User ID or Access Token is missing.');
+    return;
+  }
 
   var today = new Date();
   var year = today.getFullYear();
@@ -178,6 +214,13 @@ function fetchWorkoutImage() {
   console.log('Selected date for workout image:', selectedDate);
 
   var apiUrl = "https://crossfit168.clubfit.net.au/api/v1/workout/myworkout";
+  var headers = {
+    "Host": "crossfit168.clubfit.net.au",
+    "accept": "application/json",
+    "content-type": "application/json",
+    "accept-language": "en-AU,en;q=0.9",
+    "authorization": `bearer ${accessToken}`
+  };
   var data = {
     "userId": userId,
     "clubId": 2,
@@ -190,7 +233,7 @@ function fetchWorkoutImage() {
   console.log('API URL:', apiUrl);
   console.log('Request Data:', JSON.stringify(data));
 
-  makeApiRequest(apiUrl, 'POST', data, function(response) {
+  makeImageApiRequest(apiUrl, 'POST', data, headers, function(response) {
     if (response && response.payload && response.payload.imageUrl) {
       var imageUrl = response.payload.imageUrl;
       var imgElement = document.getElementById("day-picture");
@@ -206,6 +249,7 @@ function fetchWorkoutImage() {
     }
   });
 }
+
 
 
 
