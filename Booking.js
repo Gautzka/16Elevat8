@@ -344,6 +344,7 @@ function saveDatePickerSessionStorage(date) {
 
 
 function bookClass(button) {
+    console.log("booking")
     var classScheduleId = button.getAttribute('data-class-schedule-id');
     var classDateTime = button.getAttribute('data-class-date');
     var className = button.getAttribute('data-class-name');
@@ -365,6 +366,7 @@ function bookClass(button) {
     xhr.setRequestHeader('Content-Type', 'application/json');
     xhr.setRequestHeader('Accept', 'application/json');
     xhr.setRequestHeader('Authorization', 'Bearer ' + accessToken);
+
     xhr.onload = function() {
         console.log("status: " + xhr.status)
         if (xhr.status >= 200 && xhr.status < 300) {
@@ -385,6 +387,7 @@ function bookClass(button) {
     };
 
     xhr.send(JSON.stringify(data));
+    console.log("close booking")
 }
 
 function displayErrorMessage(button, message) {
