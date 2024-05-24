@@ -147,7 +147,6 @@ function updateProfilePicture(base64String) {
 
     if (imgElement) {
       imgElement.src = "data:image/png;base64," + base64String;
-      imgElement.style.visibility = 'visible';
     } else {
       console.error('Element with ID "profile-picture" not found.');
     }
@@ -194,7 +193,6 @@ function fetchWorkoutImage() {
 
       if (imgElement) {
         imgElement.src = imageUrl;
-        imgElement.style.visibility = 'visible';
       } else {
         console.error('Element with ID "day-picture" not found.');
       }
