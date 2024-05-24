@@ -1,8 +1,7 @@
 // Dedicated function for making API requests
 function makeApiRequest(url, method, data, callback, retryAttempt = 0) {
 
-  console.log("Calling makeApiRequest URL " + url)
-  console.log("Calling makeApiRequest data " + data)
+
   var accessToken = localStorage.getItem('access_token');
   var xhr = new XMLHttpRequest();
   xhr.open(method, url, true);
@@ -11,10 +10,8 @@ function makeApiRequest(url, method, data, callback, retryAttempt = 0) {
   xhr.setRequestHeader('Authorization', 'Bearer ' + accessToken);
   xhr.onload = function() {
     if (xhr.status === 200) {
-      console.log("Request OK: " + url)
       callback(JSON.parse(xhr.responseText));
     } else {
-      console.error('Error fetching information:', xhr.status);
       if (retryAttempt < 1) { // Prevent infinite loop, retry only once
         errorAPICheckLogin(function(retry) {
           if (retry) {
@@ -22,7 +19,6 @@ function makeApiRequest(url, method, data, callback, retryAttempt = 0) {
           }
         });
       } else {
-        console.log("Request KO: " + url)
         console.error('makeApiRequest - Retried request failed:', xhr.status);
       }
     }
@@ -151,6 +147,7 @@ function updateProfilePicture(base64String) {
 
     if (imgElement) {
       imgElement.src = "data:image/png;base64," + base64String;
+      imgElement.style.visibility = 'visible';
     } else {
       console.error('Element with ID "profile-picture" not found.');
     }
@@ -190,15 +187,14 @@ function fetchWorkoutImage() {
   };
 
   makeApiRequest(apiUrl, 'POST', data, function(response) {
-    console.log('API Response:', response);
 
     if (response && response.payload && response.payload.imageUrl) {
       var imageUrl = response.payload.imageUrl;
       var imgElement = document.getElementById("day-picture");
 
       if (imgElement) {
-        imgElement.src = imageUrl;
-        console.log('Workout image URL set:', imageUrl);
+        imgElement.src = imageUrl;\
+        imgElement.style.visibility = 'visible';
       } else {
         console.error('Element with ID "day-picture" not found.');
       }
