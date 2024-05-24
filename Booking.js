@@ -342,14 +342,20 @@ function saveDatePickerSessionStorage(date) {
 //     xhr.send(JSON.stringify(data));
 // }
 
-
 function bookClass(button) {
-    console.log("booking")
+    console.log("Starting booking process");
+    
     var classScheduleId = button.getAttribute('data-class-schedule-id');
     var classDateTime = button.getAttribute('data-class-date');
     var className = button.getAttribute('data-class-name');
     var userId = localStorage.getItem('userId');
     var accessToken = localStorage.getItem('access_token');
+    
+    console.log("Class Schedule ID:", classScheduleId);
+    console.log("Class DateTime:", classDateTime);
+    console.log("Class Name:", className);
+    console.log("User ID:", userId);
+    console.log("Access Token:", accessToken);
 
     var bookUrl = "https://crossfit168.clubfit.net.au/api/v1/booking/book-class-v2";
     var data = {
@@ -360,21 +366,33 @@ function bookClass(button) {
         onBehalfBookingReference: "",
         onBehalfBookFor: ""
     };
+    
+    console.log("Booking URL:", bookUrl);
+    console.log("Request Data:", data);
 
     var xhr = new XMLHttpRequest();
     xhr.open('POST', bookUrl, true);
     xhr.setRequestHeader('Content-Type', 'application/json');
     xhr.setRequestHeader('Accept', 'application/json');
     xhr.setRequestHeader('Authorization', 'Bearer ' + accessToken);
-
+    
     xhr.onload = function() {
-        console.log("status: " + xhr.status)
+        console.log("Response Status:", xhr.status);
+        console.log("Response Headers:", xhr.getAllResponseHeaders());
+        console.log("Response Text:", xhr.responseText);
+        
         if (xhr.status >= 200 && xhr.status < 300) {
             fetchAndDisplayClassesAvailable();
             clearErrorMessage(button); // Clear any previous error message if the booking is successful
         } else {
             console.error('bookClass - Error while booking:', xhr.status);
-            var response = JSON.parse(xhr.responseText);
+            var response;
+            try {
+                response = JSON.parse(xhr.responseText);
+            } catch (e) {
+                console.error('Failed to parse response JSON:', e);
+                response = { errors: { message: 'Unknown error occurred' } };
+            }
             displayErrorMessage(button, response.errors.message);
             errorAPICheckLogin();
         }
@@ -387,8 +405,11 @@ function bookClass(button) {
     };
 
     xhr.send(JSON.stringify(data));
-    console.log("close booking")
+    console.log("Booking request sent");
 }
+
+
+
 
 function displayErrorMessage(button, message) {
     clearErrorMessage(button); // Clear any previous error message
