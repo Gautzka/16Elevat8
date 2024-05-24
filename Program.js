@@ -357,6 +357,7 @@ function fetchAndDisplayClassesAvailable() {
 
     var locationIdMap = { "ALX": 2, "CBD": 1, "MVL": 4 };
     var accountId = Array.from(selectedLocations).map(option => locationIdMap[option.getAttribute('data-location')]);
+    console.log("Choosing: " + accountId + " option " + option)
 
     var userId = localStorage.getItem('userId');
 
