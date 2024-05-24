@@ -684,20 +684,43 @@ function fetchAndDisplayClassesAvailable() {
 
 
 
+    // var selectedLocations = document.querySelectorAll('.location-option.selected-option');
+    // if (selectedLocations.length === 0) {
+    //     // alert('Please select at least one location.');
+    //     return;
+    // }
+
+    // var selectedDate = document.getElementById('datePicker').value;
+
+    // // Get the current local date
+    // var currentDate = getLocalDate();
+
+    // var locationIdMap = { "ALX": 2, "CBD": 1, "MVL": 4 };
+    // var accountId = Array.from(selectedLocations).map(option => locationIdMap[option.getAttribute('data-location')]);
     var selectedLocations = document.querySelectorAll('.location-option.selected-option');
     if (selectedLocations.length === 0) {
+        console.log('No locations selected.');  // Added log
         // alert('Please select at least one location.');
         return;
     }
-
+    
     var selectedDate = document.getElementById('datePicker').value;
-
+    console.log('Selected Date:', selectedDate);  // Added log
+    
     // Get the current local date
     var currentDate = getLocalDate();
-
+    console.log('Current Local Date:', currentDate);  // Added log
+    
     var locationIdMap = { "ALX": 2, "CBD": 1, "MVL": 4 };
-    var accountId = Array.from(selectedLocations).map(option => locationIdMap[option.getAttribute('data-location')]);
-    console.log("Choosing: " + accountId + " option " + option)
+    var accountId = Array.from(selectedLocations).map(option => {
+        var location = option.getAttribute('data-location');
+        var id = locationIdMap[location];
+        console.log('Mapping location:', location, 'to ID:', id);  // Added log
+        return id;
+    });
+    
+    console.log('Selected account IDs:', accountId);  // Added log
+
     var userId = localStorage.getItem('userId');
 
     var payload = {
