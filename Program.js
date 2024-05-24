@@ -355,7 +355,7 @@ function fetchAndDisplayClassesAvailable() {
     // Get the current local date
     var currentDate = getLocalDate();
 
-    var locationIdMap = { "ALX": 2, "CBD": 1, "MKV": 4 };
+    var locationIdMap = { "ALX": 2, "CBD": 1, "MVL": 4 };
     var accountId = Array.from(selectedLocations).map(option => locationIdMap[option.getAttribute('data-location')]);
 
     var userId = localStorage.getItem('userId');
