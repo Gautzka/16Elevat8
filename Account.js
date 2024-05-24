@@ -100,8 +100,8 @@ function displayMembershipData(response) {
   var membershipStartDate = response.contractTypeDetails.membershipStartDate;
   var membershipName = response.membershipName;
   var nextPaymentDate = response.contractTypeDetails.nextPaymentDate;
-  var nextPaymentAmount = response.contractTypeDetails.nextPaymentAmount;
-
+  var nextPaymentAmount = response.contractTypeDetails.nextPaymentAmount !== undefined ? response.contractTypeDetails.nextPaymentAmount : 0;
+  
   var membershipInfoElement = document.getElementById('membership-info');
 
   if (membershipInfoElement) {
