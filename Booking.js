@@ -366,6 +366,7 @@ function bookClass(button) {
     xhr.setRequestHeader('Accept', 'application/json');
     xhr.setRequestHeader('Authorization', 'Bearer ' + accessToken);
     xhr.onload = function() {
+        console.log("status: " + xhr.status)
         if (xhr.status >= 200 && xhr.status < 300) {
             fetchAndDisplayClassesAvailable();
             clearErrorMessage(button); // Clear any previous error message if the booking is successful
