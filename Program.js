@@ -314,7 +314,7 @@ function shareWorkout() {
   // Fetch the date and the text inside the text-container at the time of the click
   const dateText = document.getElementById('date-header').innerText;
   let textToShare = document.getElementById('program-available').innerText;
-  const elevat8Signature = 'Powered by 1.6.Elev8'; // italic
+  const elevat8Signature = '1.6.Elev8 - ' + window.location.href; // italic
 
 
   // Remove any leading and trailing non-alphanumeric characters
