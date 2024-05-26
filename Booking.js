@@ -620,7 +620,6 @@ function checkAttendees(button, bookingItem) {
 //     xhr.send(JSON.stringify(data));
 // }
 
-
 // adding a resolve / promise for async function
 function cancelBooking_resolve(memberBookingId, retryAttempt = 0) {
     return new Promise((resolve, reject) => {
@@ -633,10 +632,12 @@ function cancelBooking_resolve(memberBookingId, retryAttempt = 0) {
       xhr.setRequestHeader('Accept', 'application/json');
       xhr.setRequestHeader('Authorization', 'Bearer ' + accessToken);
       xhr.onload = function() {
+        console.log('Response received:', xhr.responseText);
         if (xhr.status >= 200 && xhr.status < 300) {
           resolve(xhr.responseText); // Resolve the promise on success
         } else {
           console.error('Error while cancelling booking, xhr.status: ', xhr.status);
+          console.error('Error details:', xhr.responseText);
           if (retryAttempt < 1) {
             errorAPICheckLogin(function(retry) {
               if (retry) {
@@ -673,7 +674,6 @@ function cancelBooking_resolve(memberBookingId, retryAttempt = 0) {
       xhr.send();
     });
 }
-
 
 
 // This code is for displaying the class available
