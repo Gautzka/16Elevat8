@@ -621,24 +621,40 @@ function checkAttendees(button, bookingItem) {
 // }
 
 
-
-
 // adding a resolve / promise for async function
 function cancelBooking_resolve(memberBookingId, retryAttempt = 0) {
-  return new Promise((resolve, reject) => {
-    var accessToken = localStorage.getItem('access_token');
-    var cancelUrl = `https://crossfit168.clubfit.net.au/api/v1/booking/cancel/${memberBookingId}`;
-
-    var xhr = new XMLHttpRequest();
-    xhr.open('POST', cancelUrl, true);
-    xhr.setRequestHeader('Content-Type', 'application/json');
-    xhr.setRequestHeader('Accept', 'application/json');
-    xhr.setRequestHeader('Authorization', 'Bearer ' + accessToken);
-    xhr.onload = function() {
-      if (xhr.status >= 200 && xhr.status < 300 && response.statusCode === 200) {
-        resolve(xhr.responseText); // Resolve the promise on success
-      } else {
-        console.error('Error while cancelling booking, xhr.status: ', xhr.status);
+    return new Promise((resolve, reject) => {
+      var accessToken = localStorage.getItem('access_token');
+      var cancelUrl = `https://crossfit168.clubfit.net.au/api/v1/booking/cancel/${memberBookingId}`;
+  
+      var xhr = new XMLHttpRequest();
+      xhr.open('POST', cancelUrl, true);
+      xhr.setRequestHeader('Content-Type', 'application/json');
+      xhr.setRequestHeader('Accept', 'application/json');
+      xhr.setRequestHeader('Authorization', 'Bearer ' + accessToken);
+      xhr.onload = function() {
+        if (xhr.status >= 200 && xhr.status < 300) {
+          resolve(xhr.responseText); // Resolve the promise on success
+        } else {
+          console.error('Error while cancelling booking, xhr.status: ', xhr.status);
+          if (retryAttempt < 1) {
+            errorAPICheckLogin(function(retry) {
+              if (retry) {
+                cancelBooking_resolve(memberBookingId, retryAttempt + 1)
+                  .then(resolve)
+                  .catch(reject);
+              } else {
+                reject(new Error('cancelBooking_resolve - Cancellation failed after retry'));
+              }
+            });
+          } else {
+            reject(new Error('cancelBooking_resolve - Cancellation failed')); // Reject the promise on failure
+          }
+        }
+      };
+  
+      xhr.onerror = function() {
+        console.error('cancelBooking_resolve - Network error while cancelling booking');
         if (retryAttempt < 1) {
           errorAPICheckLogin(function(retry) {
             if (retry) {
@@ -646,38 +662,17 @@ function cancelBooking_resolve(memberBookingId, retryAttempt = 0) {
                 .then(resolve)
                 .catch(reject);
             } else {
-              reject(new Error('cancelBooking_resolve - Cancellation failed after retry'));
+              reject(new Error('cancelBooking_resolve - Cancellation failed after network error and retry'));
             }
           });
         } else {
-          reject(new Error('cancelBooking_resolve - Cancellation failed')); // Reject the promise on failure
+          reject(new Error('cancelBooking_resolve - Network error')); // Reject the promise on network error
         }
-      }
-    };
-
-    xhr.onerror = function() {
-      console.error('cancelBooking_resolve - Network error while cancelling booking');
-      if (retryAttempt < 1) {
-        errorAPICheckLogin(function(retry) {
-          if (retry) {
-            cancelBooking_resolve(memberBookingId, retryAttempt + 1)
-              .then(resolve)
-              .catch(reject);
-          } else {
-            reject(new Error('cancelBooking_resolve- Cancellation failed after network error and retry'));
-          }
-        });
-      } else {
-        reject(new Error('cancelBooking_resolve - Network error')); // Reject the promise on network error
-      }
-    };
-
-    xhr.send('null');
-  });
+      };
+  
+      xhr.send();
+    });
 }
-
-
-
 
 
 
