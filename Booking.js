@@ -1,1 +1,1113 @@
-var a0_0x3a9a7c=a0_0x22f7;(function(_0x4919aa,_0x1736e2){var _0x278710=a0_0x22f7,_0x5dbe17=_0x4919aa();while(!![]){try{var _0x2f052c=parseInt(_0x278710(0x1e0))/0x1*(parseInt(_0x278710(0x20f))/0x2)+parseInt(_0x278710(0x1c5))/0x3+-parseInt(_0x278710(0x1e4))/0x4+parseInt(_0x278710(0x1d2))/0x5+-parseInt(_0x278710(0x1c8))/0x6*(-parseInt(_0x278710(0x1ff))/0x7)+parseInt(_0x278710(0x1e7))/0x8+-parseInt(_0x278710(0x196))/0x9;if(_0x2f052c===_0x1736e2)break;else _0x5dbe17['push'](_0x5dbe17['shift']());}catch(_0x4e62dd){_0x5dbe17['push'](_0x5dbe17['shift']());}}}(a0_0x51b9,0x1ce45),document[a0_0x3a9a7c(0x1bd)](a0_0x3a9a7c(0x1b3),function(){var _0x114bf0=a0_0x3a9a7c;initDatePicker(),fetchAndisplayClassBooked(),updateHeaderDate(document['getElementById']('datePicker')[_0x114bf0(0x1e2)]);var _0x4b4456=document['getElementById'](_0x114bf0(0x211));_0x4b4456[_0x114bf0(0x1bd)]('click',function(){fetchAndisplayClassBooked();});var _0x4b4456=document[_0x114bf0(0x18d)](_0x114bf0(0x1c9));_0x4b4456[_0x114bf0(0x1bd)]('click',function(){fetchAndDisplayClassesAvailable();});const _0x469118=document['getElementById']('datePicker'),_0x1d78ed=document[_0x114bf0(0x18d)]('prevDay'),_0x14fe4=document[_0x114bf0(0x18d)](_0x114bf0(0x1e1));_0x1d78ed['addEventListener'](_0x114bf0(0x243),function(){var _0x4e274b=_0x114bf0;_0xc58854(-0x1);var _0x18843e=document['getElementById'](_0x4e274b(0x19b))[_0x4e274b(0x1e2)];saveDatePickerSessionStorage(_0x18843e),updateHeaderDate(_0x18843e),fetchAndDisplayClassesAvailable();}),_0x14fe4[_0x114bf0(0x1bd)](_0x114bf0(0x243),function(){var _0x1dc2bb=_0x114bf0;_0xc58854(0x1);var _0x9fdc=document[_0x1dc2bb(0x18d)]('datePicker')[_0x1dc2bb(0x1e2)];saveDatePickerSessionStorage(_0x9fdc),updateHeaderDate(_0x9fdc),fetchAndDisplayClassesAvailable();}),_0x469118[_0x114bf0(0x1bd)]('change',function(){var _0x107224=_0x114bf0,_0x42814d=document[_0x107224(0x18d)](_0x107224(0x19b))[_0x107224(0x1e2)];saveDatePickerSessionStorage(_0x42814d),updateHeaderDate(_0x42814d),fetchAndDisplayClassesAvailable();});function _0xc58854(_0x3636a3){var _0xb41d31=_0x114bf0;const _0x17ec23=new Date(_0x469118[_0xb41d31(0x1e2)]+'T00:00:00');_0x17ec23[_0xb41d31(0x239)](_0x17ec23[_0xb41d31(0x1c4)]()+_0x3636a3),_0x469118[_0xb41d31(0x1e2)]=formatDate(_0x17ec23);}var _0x2248fe=document['querySelectorAll'](_0x114bf0(0x234));_0x2248fe[_0x114bf0(0x1e8)](function(_0x213b7b){var _0x225926=_0x114bf0;_0x213b7b[_0x225926(0x1bd)](_0x225926(0x243),function(){var _0x206399=_0x225926;_0x2248fe[_0x206399(0x1e8)](function(_0x313243){var _0x212768=_0x206399;_0x313243['classList'][_0x212768(0x1ab)](_0x212768(0x205));}),this[_0x206399(0x1b9)]['add']('selected-option'),fetchAndDisplayClassesAvailable();});});var _0x2d72a7=document[_0x114bf0(0x231)](_0x114bf0(0x221));_0x2d72a7[_0x114bf0(0x1e8)](function(_0x875385){var _0x447754=_0x114bf0;_0x875385[_0x447754(0x1bd)](_0x447754(0x243),function(){var _0x1c62f5=_0x447754;this['classList'][_0x1c62f5(0x1f6)](_0x1c62f5(0x205)),fetchAndDisplayClassesAvailable();});}),document[_0x114bf0(0x18d)](_0x114bf0(0x232))['addEventListener'](_0x114bf0(0x243),function(_0x4f9dad){var _0x400dc1=_0x114bf0;if(_0x4f9dad[_0x400dc1(0x1df)]&&_0x4f9dad[_0x400dc1(0x1df)][_0x400dc1(0x1de)](_0x400dc1(0x22c))){var _0x3e0835=_0x4f9dad[_0x400dc1(0x1df)][_0x400dc1(0x230)](_0x400dc1(0x1eb));cancelBooking_resolve(_0x3e0835)[_0x400dc1(0x1fc)](()=>{fetchAndDisplayClassesAvailable();})[_0x400dc1(0x1aa)](_0x226f16=>{var _0x3fcf73=_0x400dc1;console[_0x3fcf73(0x23e)](_0x3fcf73(0x1c2),_0x226f16);});}else{if(_0x4f9dad['target']&&_0x4f9dad['target'][_0x400dc1(0x1de)](_0x400dc1(0x1a7)))bookClass(_0x4f9dad[_0x400dc1(0x1df)]),fetchAndDisplayClassesAvailable();else{if(_0x4f9dad[_0x400dc1(0x1df)]&&_0x4f9dad[_0x400dc1(0x1df)][_0x400dc1(0x1cf)](_0x400dc1(0x222))){var _0x221223=_0x4f9dad[_0x400dc1(0x1df)][_0x400dc1(0x1cf)](_0x400dc1(0x222));if(_0x4f9dad['target'][_0x400dc1(0x1cf)](_0x400dc1(0x1a1))){_0x221223['querySelectorAll'](_0x400dc1(0x216))[_0x400dc1(0x1e8)](function(_0x4e5bdb){var _0x1cf62b=_0x400dc1;_0x4e5bdb[_0x1cf62b(0x1b9)][_0x1cf62b(0x1ab)]('enlarged');});return;}var _0x15d834=_0x221223[_0x400dc1(0x200)](_0x400dc1(0x1a7))||_0x221223[_0x400dc1(0x200)]('.cancel-button')||_0x221223[_0x400dc1(0x200)](_0x400dc1(0x1a6));if(_0x15d834){var _0x45c11f=_0x15d834[_0x400dc1(0x230)]('data-class-schedule-id'),_0x1f1bef=_0x15d834[_0x400dc1(0x230)]('data-class-date'),_0x56e3c4=_0x221223[_0x400dc1(0x200)](_0x400dc1(0x19f))[_0x400dc1(0x1be)],_0x396fda=_0x221223[_0x400dc1(0x200)](_0x400dc1(0x206))[_0x400dc1(0x1be)],_0x20f2ba=document[_0x400dc1(0x210)](_0x400dc1(0x236));_0x20f2ba[_0x400dc1(0x24a)](_0x400dc1(0x1c6),_0x45c11f),_0x20f2ba[_0x400dc1(0x24a)](_0x400dc1(0x228),_0x1f1bef),_0x20f2ba['setAttribute'](_0x400dc1(0x1bb),_0x56e3c4),_0x20f2ba[_0x400dc1(0x24a)](_0x400dc1(0x1c7),_0x396fda),checkAttendees(_0x20f2ba,_0x221223);}else console['error']('No\x20book-button\x20or\x20cancel-button\x20found\x20in\x20booking-item.');}}}}),document[_0x114bf0(0x18d)](_0x114bf0(0x23c))[_0x114bf0(0x1bd)](_0x114bf0(0x243),function(_0x44ad33){var _0x356d9a=_0x114bf0;if(_0x44ad33[_0x356d9a(0x1df)]&&_0x44ad33['target'][_0x356d9a(0x1de)](_0x356d9a(0x22c))){var _0x5ec701=_0x44ad33[_0x356d9a(0x1df)][_0x356d9a(0x230)]('data-member-booking-id');cancelBooking_resolve(_0x5ec701)['then'](()=>{fetchAndisplayClassBooked();})[_0x356d9a(0x1aa)](_0x4d0db8=>{var _0x1766d3=_0x356d9a;console[_0x1766d3(0x23e)](_0x1766d3(0x1c2),_0x4d0db8);});}});}));function a0_0x51b9(){var _0x38ea17=['contains','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','style','GET','.attendee-photo','test','checkAttendees\x20-\x20Error\x20while\x20checking\x20attendees:','message','cancelBooking_resolve\x20-\x20Network\x20error','spot','</p>','responseText','null','payload','memberBookingId','.class-option','.booking-item','\x22>Cancel</button>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22spotsleft\x22>','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>','short','\x22\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20data-class-date=\x22','</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22buttonandavailability\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22action-button\x22\x20style=\x22margin-left:\x20auto;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','data-class-date','errorAPICheckLogin\x20-\x20function\x20called','response.messageFields','setItem','.cancel-button','checkAttendees\x20-\x20Network\x20error\x20while\x20checking\x20attendees','errorAPICheckLogin\x20-\x20login\x20not\x20validated','stopPropagation','getAttribute','querySelectorAll','class-available','bookingStatus','.location-option','validateLogin\x20-\x20Required\x20session\x20storage\x20items\x20are\x20missing','button','User\x20is\x20not\x20logged\x20in,\x20redirecting\x20to\x20login\x20page.','\x22>Full</button>','setDate','https://crossfit168.clubfit.net.au/api/v1/booking/class-participants','https://crossfit168.clubfit.net.au/api/v1/booking/cancel/','booking-info','getFullYear','error','split','POST','open','setRequestHeader','click','getItem','userId','\x22>Book</button>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22spotsleft\x22>','</h3>','enlarged','Error\x20fetching\x20information:','setAttribute','classCapacity','toLocaleString','validateLogin\x20-\x20Validation\x20failed:','getElementById','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22action-button\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<button\x20class=\x22cancel-button\x22\x20data-member-booking-id=\x22','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22booking-item\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22time\x22>','en-AU','getTime','gridColumn','spots','onerror','<div\x20class=\x22attendee-item\x22><img\x20src=\x22','1003473axzpYY','display','bookedId','cancelBooking_resolve\x20-\x20Network\x20error\x20while\x20cancelling\x20booking','Content-Type','datePicker','keys','sort','date-header','.time','Booked','.attendees','map','Cancelled','includes','innerHTML','.full-button','.book-button','trim','https://admin.clubfit.net.au/api/v1/account/validate','catch','remove','userType','All','.class-option.selected-option','CrossFit','cancelBooking_resolve-\x20Cancellation\x20failed\x20after\x20network\x20error\x20and\x20retry','<div>No\x20attendees</div>','application/json','DOMContentLoaded','parse','Accept','status','\x22\x20alt=\x22Avatar\x22\x20class=\x22attendee-photo\x22>','Weightlifting','classList','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22booked-class-columns\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22div-each-class\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22w-richtext\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','data-class-time','classScheduleId','addEventListener','textContent','log','refresh_token','Network\x20error\x20occurred\x20while\x20booking.','EventListener\x20-\x20Cancellation\x20error:','No\x20locations\x20selected.','getDate','385755FAyrJH','data-class-schedule-id','data-class-name','34572CwVSKX','tab-book-class','access_token','\x22\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20data-class-date=\x22','length','fullName','isArray','closest','slice','send','127420WqxjQm','timestampLastChanged','1\x20/\x20-1','data-location','clubName','Unknown\x20error\x20occurred','href','className','none','getMonth','xhr.status:\x20','cancelBooking_resolve\x20-\x20Cancellation\x20failed','matches','target','2589MoOacc','nextDay','value','stringify','339020jSBFGC','statusCode','\x22\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20data-class-schedule-id=\x22','1448zIcLkc','forEach','selectedDate','Error\x20while\x20cancelling\x20booking,\x20xhr.status:\x20','data-member-booking-id','nextSibling','\x20left</div>','attendees','<button\x20class=\x22book-button\x22\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20data-class-schedule-id=\x22','Authorization','onload','\x22\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20data-class-name=\x22','https://crossfit168.clubfit.net.au/api/v1/booking/current/','cancelBooking_resolve\x20-\x20Cancellation\x20failed\x20after\x20retry','long','toggle','join','block','portalUserId','div','getTimezoneOffset','then','Bearer\x20','2-digit','91blhnAc','querySelector','<p>','<button\x20class=\x22full-button\x22\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20data-class-schedule-id=\x22','Element\x20with\x20id\x20\x27date-header\x27\x20not\x20found!','location','selected-option','.class-name','<div\x20class=\x22booked-class-columns\x22><div\x20class=\x22div-each-class\x22><div\x20class=\x22w-richtext\x22><p>No\x20class\x20available</p></div></div></div>','bookedDate','errors','\x22>Cancel</button>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>','makeApiRequest\x20-\x20Retried\x20request\x20failed:','from','Other','localeCompare','66SRtVMi','createElement','tab-existing-booking'];a0_0x51b9=function(){return _0x38ea17;};return a0_0x51b9();}function initDatePicker(){var _0x1be98b=a0_0x3a9a7c;const _0xb4b513=document[_0x1be98b(0x18d)](_0x1be98b(0x19b));let _0x48e663=sessionStorage['getItem'](_0x1be98b(0x1e9)),_0x3de64e=sessionStorage[_0x1be98b(0x244)](_0x1be98b(0x1d3));_0x48e663&&_0x3de64e&&isWithinValidityPeriod(_0x3de64e,0.5)?_0xb4b513[_0x1be98b(0x1e2)]=_0x48e663:(currentDate=getLocalDate(),_0xb4b513['value']=currentDate,saveDatePickerSessionStorage(currentDate));}function isWithinValidityPeriod(_0xacfd98,_0x1909df){var _0x5bffc5=a0_0x3a9a7c;const _0x59be0d=new Date()[_0x5bffc5(0x191)](),_0x37ff84=(_0x59be0d-_0xacfd98)/(0x3e8*0x3c*0x3c);return _0x37ff84<=_0x1909df;}function formatDate(_0x4c11e4){var _0x547703=a0_0x3a9a7c;let _0x594c65=new Date(_0x4c11e4),_0x183956=''+(_0x594c65[_0x547703(0x1db)]()+0x1),_0x5d2bec=''+_0x594c65[_0x547703(0x1c4)](),_0x391d90=_0x594c65[_0x547703(0x23d)]();if(_0x183956[_0x547703(0x1cc)]<0x2)_0x183956='0'+_0x183956;if(_0x5d2bec[_0x547703(0x1cc)]<0x2)_0x5d2bec='0'+_0x5d2bec;return[_0x391d90,_0x183956,_0x5d2bec][_0x547703(0x1f7)]('-');}function updateHeaderDate(_0x42ce9e){var _0x1faeea=a0_0x3a9a7c;const _0x28d423=document[_0x1faeea(0x18d)](_0x1faeea(0x19e));if(!_0x28d423){console[_0x1faeea(0x23e)](_0x1faeea(0x203));return;}const _0x320571=new Date(_0x42ce9e),_0x1ff62f=_0x320571[_0x1faeea(0x1c4)](),_0x3101af=_0x320571['toLocaleString'](_0x1faeea(0x190),{'month':'long'}),_0xcf4ccc=_0x320571[_0x1faeea(0x24c)](_0x1faeea(0x190),{'weekday':_0x1faeea(0x1f5)});function _0x1dde33(_0x1195f1){if(_0x1195f1>0x3&&_0x1195f1<0x15)return'th';switch(_0x1195f1%0xa){case 0x1:return'st';case 0x2:return'nd';case 0x3:return'rd';default:return'th';}}const _0x3ca0c5=_0xcf4ccc+'\x20'+(_0x1ff62f<0xa?'0':'')+_0x1ff62f+_0x1dde33(_0x1ff62f)+'\x20'+_0x3101af;_0x28d423['textContent']=_0x3ca0c5;}function getLocalDate(){var _0x172947=a0_0x3a9a7c;const _0x33c45e=new Date(),_0x10e6b5=_0x33c45e[_0x172947(0x1fb)]()*0xea60,_0x5af376=new Date(_0x33c45e-_0x10e6b5)['toISOString']()[_0x172947(0x1d0)](0x0,0xa);return _0x5af376;}function saveDatePickerSessionStorage(_0x18a4c9){var _0x31882c=a0_0x3a9a7c;sessionStorage[_0x31882c(0x22b)](_0x31882c(0x1e9),_0x18a4c9),timestamp=new Date()[_0x31882c(0x191)](),sessionStorage[_0x31882c(0x22b)](_0x31882c(0x1d3),timestamp);}function bookClass(_0xc2989f){var _0x5895d9=a0_0x3a9a7c,_0x55996e=_0xc2989f[_0x5895d9(0x230)](_0x5895d9(0x1c6)),_0x136810=_0xc2989f[_0x5895d9(0x230)]('data-class-date'),_0x5b552c=_0xc2989f['getAttribute'](_0x5895d9(0x1c7)),_0x3cfba7=localStorage[_0x5895d9(0x244)](_0x5895d9(0x245)),_0x3a066c=localStorage[_0x5895d9(0x244)](_0x5895d9(0x1ca)),_0x339b37='https://crossfit168.clubfit.net.au/api/v1/booking/book-class-v2',_0x2f2d01={'classScheduleId':_0x55996e,'classDateTime':_0x136810,'className':_0x5b552c,'userId':_0x3cfba7,'onBehalfBookingReference':'','onBehalfBookFor':''},_0x273ba7=new XMLHttpRequest();_0x273ba7[_0x5895d9(0x241)](_0x5895d9(0x240),_0x339b37,!![]),_0x273ba7['setRequestHeader'](_0x5895d9(0x19a),_0x5895d9(0x1b2)),_0x273ba7[_0x5895d9(0x242)](_0x5895d9(0x1b5),_0x5895d9(0x1b2)),_0x273ba7[_0x5895d9(0x242)](_0x5895d9(0x1f0),_0x5895d9(0x1fd)+_0x3a066c),_0x273ba7[_0x5895d9(0x1f1)]=function(){var _0x21e29b=_0x5895d9,_0x2138a0;try{_0x2138a0=JSON[_0x21e29b(0x1b4)](_0x273ba7[_0x21e29b(0x21d)]);}catch(_0x975489){_0x2138a0={'errors':{'message':_0x21e29b(0x1d7)}};}_0x273ba7[_0x21e29b(0x1b6)]>=0xc8&&_0x273ba7[_0x21e29b(0x1b6)]<0x12c&&_0x2138a0[_0x21e29b(0x1e5)]===0xc8?fetchAndDisplayClassesAvailable():(console[_0x21e29b(0x1bf)](_0x21e29b(0x1dc)+_0x273ba7[_0x21e29b(0x1b6)]+_0x21e29b(0x22a)),alert(_0x2138a0[_0x21e29b(0x209)][_0x21e29b(0x219)]),errorAPICheckLogin(function(_0x25222d){var _0x9e326a=_0x21e29b;!_0x25222d&&console['error'](_0x9e326a(0x237));}));},_0x273ba7[_0x5895d9(0x194)]=function(){var _0x55b35c=_0x5895d9;alert(_0x55b35c(0x1c1)),errorAPICheckLogin(function(_0x433623){var _0x3020b6=_0x55b35c;!_0x433623&&console[_0x3020b6(0x23e)](_0x3020b6(0x237));});},_0x273ba7[_0x5895d9(0x1d1)](JSON[_0x5895d9(0x1e3)](_0x2f2d01));}function displayErrorMessage(_0x36031b,_0x207a3d){var _0x12902a=a0_0x3a9a7c;clearErrorMessage(_0x36031b);var _0x521abb=document[_0x12902a(0x210)]('div');_0x521abb[_0x12902a(0x1d9)]='error-message',_0x521abb[_0x12902a(0x1be)]=_0x207a3d,_0x36031b['parentNode']['insertBefore'](_0x521abb,_0x36031b[_0x12902a(0x1ec)]);}function clearErrorMessage(_0x470a03){var _0x1ae6dd=a0_0x3a9a7c,_0x41a9a4=_0x470a03[_0x1ae6dd(0x1ec)];_0x41a9a4&&_0x41a9a4[_0x1ae6dd(0x1d9)]==='error-message'&&_0x41a9a4[_0x1ae6dd(0x1ab)]();}function showInlineAttendees(_0x3bde42,_0x21c93b){var _0x41f9fe=a0_0x3a9a7c,_0x488b51=_0x21c93b['querySelector']('.attendees');if(!_0x488b51)_0x488b51=document['createElement'](_0x41f9fe(0x1fa)),_0x488b51['className']=_0x41f9fe(0x1ee),_0x21c93b['appendChild'](_0x488b51),_0x488b51[_0x41f9fe(0x214)][_0x41f9fe(0x192)]=_0x41f9fe(0x1d4);else{_0x488b51[_0x41f9fe(0x214)][_0x41f9fe(0x197)]=_0x488b51[_0x41f9fe(0x214)][_0x41f9fe(0x197)]===_0x41f9fe(0x1f8)?_0x41f9fe(0x1da):_0x41f9fe(0x1f8);return;}var _0x27d864='';Array[_0x41f9fe(0x1ce)](_0x3bde42)&&_0x3bde42[_0x41f9fe(0x1cc)]>0x0?(_0x3bde42[_0x41f9fe(0x19d)]((_0x400907,_0x576c13)=>_0x400907[_0x41f9fe(0x1cd)][_0x41f9fe(0x20e)](_0x576c13['fullName'])),_0x3bde42[_0x41f9fe(0x1e8)](function(_0x5a0273){var _0x1a8d49=_0x41f9fe,_0x1c7fff=_0x5a0273[_0x1a8d49(0x1cd)][_0x1a8d49(0x23f)]('\x20')[0x0];_0x27d864+=_0x1a8d49(0x195)+_0x5a0273['memberPhotoLocation']+_0x1a8d49(0x1b7)+_0x1c7fff+'</div>';})):_0x27d864+=_0x41f9fe(0x1b1),_0x488b51[_0x41f9fe(0x1a5)]=_0x27d864,_0x488b51[_0x41f9fe(0x214)][_0x41f9fe(0x197)]=_0x41f9fe(0x1f8),_0x488b51['querySelectorAll'](_0x41f9fe(0x216))[_0x41f9fe(0x1e8)](function(_0x2a2ff1){var _0x27167b=_0x41f9fe;_0x2a2ff1['addEventListener'](_0x27167b(0x243),function(_0x19627f){var _0xe64e03=_0x27167b;_0x2a2ff1['classList'][_0xe64e03(0x212)]('enlarged')?_0x2a2ff1['classList'][_0xe64e03(0x1ab)](_0xe64e03(0x248)):(_0x488b51[_0xe64e03(0x231)](_0xe64e03(0x216))[_0xe64e03(0x1e8)](function(_0x1e0538){var _0x5ba466=_0xe64e03;_0x1e0538['classList'][_0x5ba466(0x1ab)](_0x5ba466(0x248));}),_0x2a2ff1[_0xe64e03(0x1b9)]['add']('enlarged')),_0x19627f[_0xe64e03(0x22f)]();});}),_0x488b51[_0x41f9fe(0x1bd)](_0x41f9fe(0x243),function(_0x521b2c){var _0x583a8e=_0x41f9fe;_0x488b51[_0x583a8e(0x231)](_0x583a8e(0x216))[_0x583a8e(0x1e8)](function(_0x5e0c24){var _0x135f0a=_0x583a8e;_0x5e0c24['classList'][_0x135f0a(0x1ab)](_0x135f0a(0x248));}),_0x521b2c[_0x583a8e(0x22f)]();}),document['addEventListener'](_0x41f9fe(0x243),function(_0x1bbdd6){var _0x103e0b=_0x41f9fe;!_0x21c93b['contains'](_0x1bbdd6[_0x103e0b(0x1df)])&&_0x488b51[_0x103e0b(0x231)](_0x103e0b(0x216))[_0x103e0b(0x1e8)](function(_0x137d89){var _0x300cde=_0x103e0b;_0x137d89[_0x300cde(0x1b9)][_0x300cde(0x1ab)](_0x300cde(0x248));});});}function checkAttendees(_0x6acc08,_0x58e60b){var _0x82168e=a0_0x3a9a7c,_0x58cc1f=_0x6acc08[_0x82168e(0x230)](_0x82168e(0x1c6)),_0x512dc7=_0x6acc08['getAttribute'](_0x82168e(0x228)),_0x28b812=_0x6acc08['getAttribute'](_0x82168e(0x1bb)),_0x25c313=_0x82168e(0x23a),_0x1e5770={'classScheduleId':_0x58cc1f,'selectedDate':_0x512dc7,'classTime':_0x28b812},_0xbc1bc9=new XMLHttpRequest();_0xbc1bc9[_0x82168e(0x241)](_0x82168e(0x240),_0x25c313,!![]),_0xbc1bc9['setRequestHeader'](_0x82168e(0x19a),_0x82168e(0x1b2)),_0xbc1bc9[_0x82168e(0x242)]('Accept',_0x82168e(0x1b2)),_0xbc1bc9[_0x82168e(0x242)](_0x82168e(0x1f0),'bearer'),_0xbc1bc9[_0x82168e(0x1f1)]=function(){var _0x2ca4b5=_0x82168e;if(_0xbc1bc9[_0x2ca4b5(0x1b6)]>=0xc8&&_0xbc1bc9['status']<0x12c){var _0x4eddd6=JSON[_0x2ca4b5(0x1b4)](_0xbc1bc9[_0x2ca4b5(0x21d)]),_0x17d087=_0x4eddd6[_0x2ca4b5(0x21f)];showInlineAttendees(_0x17d087,_0x58e60b);}else console[_0x2ca4b5(0x23e)](_0x2ca4b5(0x218),_0xbc1bc9[_0x2ca4b5(0x1b6)]),errorAPICheckLogin();},_0xbc1bc9[_0x82168e(0x194)]=function(){var _0x59f66a=_0x82168e;console[_0x59f66a(0x23e)](_0x59f66a(0x22d)),errorAPICheckLogin();},_0xbc1bc9['send'](JSON['stringify'](_0x1e5770));}function a0_0x22f7(_0xbb1eab,_0x58bd59){var _0x51b984=a0_0x51b9();return a0_0x22f7=function(_0x22f7ee,_0x4d581f){_0x22f7ee=_0x22f7ee-0x18c;var _0xd4abf4=_0x51b984[_0x22f7ee];return _0xd4abf4;},a0_0x22f7(_0xbb1eab,_0x58bd59);}function cancelBooking_resolve(_0x5caf2d,_0x242916=0x0){return new Promise((_0x11f831,_0x4d48ff)=>{var _0x22809d=a0_0x22f7,_0x248f76=localStorage[_0x22809d(0x244)](_0x22809d(0x1ca)),_0x1b93e3=_0x22809d(0x23b)+_0x5caf2d,_0x4a0bba=new XMLHttpRequest();_0x4a0bba['open']('POST',_0x1b93e3,!![]),_0x4a0bba[_0x22809d(0x242)](_0x22809d(0x19a),_0x22809d(0x1b2)),_0x4a0bba['setRequestHeader'](_0x22809d(0x1b5),_0x22809d(0x1b2)),_0x4a0bba[_0x22809d(0x242)](_0x22809d(0x1f0),'Bearer\x20'+_0x248f76),_0x4a0bba['onload']=function(){var _0x448f9e=_0x22809d;_0x4a0bba[_0x448f9e(0x1b6)]>=0xc8&&_0x4a0bba[_0x448f9e(0x1b6)]<0x12c&&response[_0x448f9e(0x1e5)]===0xc8?_0x11f831(_0x4a0bba['responseText']):(console['error'](_0x448f9e(0x1ea),_0x4a0bba[_0x448f9e(0x1b6)]),_0x242916<0x1?errorAPICheckLogin(function(_0x51b6b6){var _0x22e8e3=_0x448f9e;_0x51b6b6?cancelBooking_resolve(_0x5caf2d,_0x242916+0x1)['then'](_0x11f831)[_0x22e8e3(0x1aa)](_0x4d48ff):_0x4d48ff(new Error(_0x22e8e3(0x1f4)));}):_0x4d48ff(new Error(_0x448f9e(0x1dd))));},_0x4a0bba[_0x22809d(0x194)]=function(){var _0x1c21fb=_0x22809d;console[_0x1c21fb(0x23e)](_0x1c21fb(0x199)),_0x242916<0x1?errorAPICheckLogin(function(_0x2d4c5b){var _0x1078d1=_0x1c21fb;_0x2d4c5b?cancelBooking_resolve(_0x5caf2d,_0x242916+0x1)[_0x1078d1(0x1fc)](_0x11f831)['catch'](_0x4d48ff):_0x4d48ff(new Error(_0x1078d1(0x1b0)));}):_0x4d48ff(new Error(_0x1c21fb(0x21a)));},_0x4a0bba['send'](_0x22809d(0x21e));});}function fetchAndDisplayClassesAvailable(){var _0x2951d3=a0_0x3a9a7c,_0x43509c=document[_0x2951d3(0x231)]('.location-option.selected-option');if(_0x43509c['length']===0x0){console['log'](_0x2951d3(0x1c3));return;}var _0x253a00=document[_0x2951d3(0x18d)](_0x2951d3(0x19b))[_0x2951d3(0x1e2)],_0x90c30e=getLocalDate(),_0x55159e={'ALX':0x2,'CBD':0x1,'MVL':0x4},_0x2cfc10=Array['from'](_0x43509c)[_0x2951d3(0x1a2)](_0x1574d6=>{var _0x105f2f=_0x2951d3,_0x5ca40b=_0x1574d6[_0x105f2f(0x230)](_0x105f2f(0x1d5)),_0x244175=_0x55159e[_0x5ca40b];return _0x244175;}),_0x2e831a=localStorage[_0x2951d3(0x244)]('userId'),_0x3b0453={'UserId':_0x2e831a,'clubId':_0x2cfc10[0x0],'selectedDate':_0x253a00,'classType':0x0,'accountId':_0x2cfc10[0x0]};if(_0x253a00<_0x90c30e)displayClassAvailable([]);else{var _0x2957f1='https://crossfit168.clubfit.net.au/api/v1/booking/search-classes';makeApiRequest(_0x2957f1,_0x2951d3(0x240),_0x3b0453,function(_0x4de7c2){var _0x572799=_0x2951d3;displayClassAvailable(_0x4de7c2[_0x572799(0x21f)]);});}}function displayClassAvailable(_0xf751e9){var _0x373f12=a0_0x3a9a7c,_0x3e3882=document['getElementById'](_0x373f12(0x232));let _0x52f932=getSelectedClassOptions(),_0xb056d7='',_0x347072=document[_0x373f12(0x18d)](_0x373f12(0x19b))[_0x373f12(0x1e2)];if(_0xf751e9[_0x373f12(0x1cc)]===0x0)_0xb056d7='\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22booking-item\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22class-name\x22>No\x20class\x20found</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>';else{const _0x4c1c11=/crossfit|cf/i,_0x5d23d5=/weightlifting/i;let _0x36b798=_0xf751e9['filter'](_0x3cfd8d=>{var _0x364026=_0x373f12;const _0x9a8d2c=_0x4c1c11[_0x364026(0x217)](_0x3cfd8d[_0x364026(0x1d9)]),_0x1bd386=_0x5d23d5[_0x364026(0x217)](_0x3cfd8d[_0x364026(0x1d9)]);if(_0x52f932[_0x364026(0x1a4)](_0x364026(0x1af))&&_0x9a8d2c)return!![];if(_0x52f932['includes'](_0x364026(0x1b8))&&_0x1bd386)return!![];if(_0x52f932[_0x364026(0x1a4)](_0x364026(0x20d))&&!_0x9a8d2c&&!_0x1bd386)return!![];if(_0x52f932[_0x364026(0x1cc)]===0x0||_0x52f932[_0x364026(0x1cc)]===0x3||_0x52f932[_0x364026(0x1a4)](_0x364026(0x1ad)))return!![];if(_0x52f932[_0x364026(0x1cc)]===0x2&&!_0x52f932[_0x364026(0x1a4)]('Other'))return _0x9a8d2c||_0x1bd386;return![];});_0x36b798[_0x373f12(0x1cc)]===0x0?_0xb056d7='\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22booking-item\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22class-name\x22>No\x20class\x20found</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>':_0x36b798[_0x373f12(0x1e8)](_0x3a70c1=>{var _0x59d6cb=_0x373f12;const _0x4ebcda=_0x3a70c1[_0x59d6cb(0x24b)]-_0x3a70c1['totalBooked'],_0x2210ff=_0x4ebcda===0x1?_0x59d6cb(0x21b):_0x59d6cb(0x193);_0xb056d7+=_0x59d6cb(0x18f)+_0x3a70c1['classTime']+'</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22class-name\x22>'+_0x3a70c1['className']+_0x59d6cb(0x227)+(_0x3a70c1['memberBookedStatus']===_0x59d6cb(0x1a0)?'<button\x20class=\x22cancel-button\x22\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20data-member-booking-id=\x22'+_0x3a70c1[_0x59d6cb(0x220)]+_0x59d6cb(0x1e6)+_0x3a70c1[_0x59d6cb(0x1bc)]+_0x59d6cb(0x226)+_0x347072+'\x22\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20data-class-name=\x22'+_0x3a70c1[_0x59d6cb(0x1d9)]+_0x59d6cb(0x223)+_0x4ebcda+'\x20'+_0x2210ff+'\x20left</div>':_0x4ebcda>0x0?_0x59d6cb(0x1ef)+_0x3a70c1['classScheduleId']+'\x22\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20data-class-date=\x22'+_0x347072+'\x22\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20data-class-name=\x22'+_0x3a70c1[_0x59d6cb(0x1d9)]+_0x59d6cb(0x246)+_0x4ebcda+'\x20'+_0x2210ff+_0x59d6cb(0x1ed):_0x59d6cb(0x202)+_0x3a70c1[_0x59d6cb(0x1bc)]+_0x59d6cb(0x1cb)+_0x347072+_0x59d6cb(0x1f2)+_0x3a70c1[_0x59d6cb(0x1d9)]+_0x59d6cb(0x238))+_0x59d6cb(0x224);});}_0x3e3882[_0x373f12(0x1a5)]=_0xb056d7;}function getSelectedClassOptions(){var _0x1feb05=a0_0x3a9a7c;const _0xec93e8=document[_0x1feb05(0x231)](_0x1feb05(0x1ae));return Array[_0x1feb05(0x20c)](_0xec93e8)[_0x1feb05(0x1a2)](_0x48062b=>{var _0x5c9fae=_0x1feb05;const _0x59d2da=_0x48062b[_0x5c9fae(0x1be)][_0x5c9fae(0x1a8)]();return _0x59d2da;});}function fetchAndisplayClassBooked(){var _0x1a6b13=a0_0x3a9a7c,_0x324adb=localStorage[_0x1a6b13(0x244)](_0x1a6b13(0x245)),_0x3f1442=_0x1a6b13(0x1f3)+_0x324adb;makeApiRequest(_0x3f1442,_0x1a6b13(0x215),null,function(_0x3664f9){displayMyBookedClass(_0x3664f9['payload']);});}function displayMyBookedClass(_0x2d667d){var _0x1c0595=a0_0x3a9a7c,_0x4abd9f=document[_0x1c0595(0x18d)](_0x1c0595(0x23c));let _0x793427='';_0x2d667d['forEach'](_0xfe8ddf=>{var _0x1f260a=_0x1c0595;if(_0xfe8ddf[_0x1f260a(0x233)]!==_0x1f260a(0x1a3)){const _0x4bad14=new Date(_0xfe8ddf[_0x1f260a(0x208)])[_0x1f260a(0x24c)]('en-AU',{'weekday':_0x1f260a(0x225),'month':_0x1f260a(0x225),'day':_0x1f260a(0x1fe),'hour':_0x1f260a(0x1fe),'minute':_0x1f260a(0x1fe)})['replace'](',',''),_0x54ff6b=_0x4bad14[_0x1f260a(0x23f)]('\x20')[0x0],_0x408420=_0x4bad14['split']('\x20')['slice'](0x1)[_0x1f260a(0x1f7)]('\x20'),_0x463e5f='<h3\x20class=\x22name-class\x22>'+_0xfe8ddf['className']+_0x1f260a(0x247),_0x4aac39=_0x1f260a(0x201)+_0x54ff6b+'\x20'+_0x408420+_0x1f260a(0x21c),_0x28a799=_0x1f260a(0x201)+_0xfe8ddf[_0x1f260a(0x1d6)]+'</p>';_0x793427+=_0x1f260a(0x1ba)+_0x463e5f+_0x1f260a(0x213)+_0x4aac39+_0x1f260a(0x213)+_0x28a799+_0x1f260a(0x18e)+_0xfe8ddf[_0x1f260a(0x198)]+_0x1f260a(0x20a);}}),!_0x793427&&(_0x793427=_0x1c0595(0x207)),_0x4abd9f[_0x1c0595(0x1a5)]=_0x793427;}function makeApiRequest(_0x3f1132,_0x1bbf21,_0x28951f,_0x5707bd,_0x1dc03a=0x0){var _0x20f44a=a0_0x3a9a7c,_0x4b3929=localStorage['getItem'](_0x20f44a(0x1ca)),_0x39c76f=new XMLHttpRequest();_0x39c76f[_0x20f44a(0x241)](_0x1bbf21,_0x3f1132,!![]),_0x39c76f[_0x20f44a(0x242)](_0x20f44a(0x19a),'application/json'),_0x39c76f['setRequestHeader'](_0x20f44a(0x1b5),_0x20f44a(0x1b2)),_0x39c76f[_0x20f44a(0x242)](_0x20f44a(0x1f0),'Bearer\x20'+_0x4b3929),_0x39c76f['onload']=function(){var _0x29f308=_0x20f44a;_0x39c76f[_0x29f308(0x1b6)]===0xc8?_0x5707bd(JSON[_0x29f308(0x1b4)](_0x39c76f[_0x29f308(0x21d)])):(console[_0x29f308(0x23e)](_0x29f308(0x249),_0x39c76f[_0x29f308(0x1b6)]),_0x1dc03a<0x1?errorAPICheckLogin(function(_0x3ba9c6){_0x3ba9c6&&makeApiRequest(_0x3f1132,_0x1bbf21,_0x28951f,_0x5707bd,_0x1dc03a+0x1);}):console[_0x29f308(0x23e)](_0x29f308(0x20b),_0x39c76f[_0x29f308(0x1b6)]));},_0x39c76f[_0x20f44a(0x194)]=function(){var _0x3e3412=_0x20f44a;console['error']('makeApiRequest\x20-\x20Network\x20error',_0x39c76f[_0x3e3412(0x194)]),_0x1dc03a<0x1?errorAPICheckLogin(function(_0x19b29d){_0x19b29d&&makeApiRequest(_0x3f1132,_0x1bbf21,_0x28951f,_0x5707bd,_0x1dc03a+0x1);}):console[_0x3e3412(0x23e)](_0x3e3412(0x20b),_0x39c76f[_0x3e3412(0x1b6)]);},_0x28951f?_0x39c76f[_0x20f44a(0x1d1)](JSON['stringify'](_0x28951f)):_0x39c76f['send']();}function errorAPICheckLogin(_0x2b0854){var _0x580768=a0_0x3a9a7c;console[_0x580768(0x1bf)](_0x580768(0x229)),validateLogin(function(_0xe9f94){var _0x26c0ed=_0x580768;_0xe9f94?(console['log']('errorAPICheckLogin\x20-\x20login\x20validated'),_0x2b0854(!![])):(console[_0x26c0ed(0x1bf)](_0x26c0ed(0x22e)),window[_0x26c0ed(0x204)][_0x26c0ed(0x1d8)]='/');});}function validateLogin(_0x50a9b9){var _0x1eeedf=a0_0x3a9a7c;if(!localStorage['getItem']('access_token')||!localStorage[_0x1eeedf(0x244)](_0x1eeedf(0x245))||!localStorage[_0x1eeedf(0x244)](_0x1eeedf(0x1ac))){console['error'](_0x1eeedf(0x235)),_0x50a9b9(![]);return;}const _0x305ec1=_0x1eeedf(0x1a9),_0x52479f='POST',_0x5db0a5={'xoken':localStorage[_0x1eeedf(0x244)](_0x1eeedf(0x1c0)),'userId':localStorage[_0x1eeedf(0x244)](_0x1eeedf(0x1f9)),'userType':localStorage[_0x1eeedf(0x244)](_0x1eeedf(0x1ac))};makeApiRequest(_0x305ec1,_0x52479f,_0x5db0a5,function(_0x50b6e9){var _0x1436b2=_0x1eeedf;Object[_0x1436b2(0x19c)](_0x50b6e9[_0x1436b2(0x21f)])[_0x1436b2(0x1e8)](function(_0x3902da){var _0x158126=_0x1436b2;localStorage[_0x158126(0x22b)](_0x3902da,_0x50b6e9['payload'][_0x3902da]);}),_0x50a9b9(!![]);},function(_0x188346){var _0x2ed454=_0x1eeedf;console['error'](_0x2ed454(0x18c),_0x188346),_0x50a9b9(![]);});}
+
+document.addEventListener('DOMContentLoaded', function() {
+
+
+    // add the today's date or the one stored
+    initDatePicker();
+
+    // on load
+    fetchAndisplayClassBooked();
+    updateHeaderDate(document.getElementById('datePicker').value);
+
+
+    // When we click on the first tab
+    var firstTabLink = document.getElementById('tab-existing-booking');
+    firstTabLink.addEventListener('click', function() {
+        fetchAndisplayClassBooked();
+    });
+
+    // When we click on the second tab
+    var firstTabLink = document.getElementById('tab-book-class');
+    firstTabLink.addEventListener('click', function() {
+      fetchAndDisplayClassesAvailable();
+    });
+
+    
+
+    
+
+    // this is used for the events
+    const datePicker = document.getElementById('datePicker');
+    const prevDay = document.getElementById('prevDay');
+    const nextDay = document.getElementById('nextDay');
+
+
+    // This is when you click on the previous arrow
+    prevDay.addEventListener('click', function() {
+        adjustOneDayDate(-1);
+        var selectedDate = document.getElementById('datePicker').value;
+        saveDatePickerSessionStorage(selectedDate);  
+        updateHeaderDate(selectedDate);
+        fetchAndDisplayClassesAvailable();
+    });
+
+    
+    // This is when you click on the next arrow
+    nextDay.addEventListener('click', function() {
+        adjustOneDayDate(1);
+        var selectedDate = document.getElementById('datePicker').value;
+        saveDatePickerSessionStorage(selectedDate);  
+        updateHeaderDate(selectedDate);
+        fetchAndDisplayClassesAvailable();
+    });
+
+    // This is when you click on the calendar itself
+    // Event listener for the date picker to call displayMyBookedClass on date change
+    datePicker.addEventListener('change', function() {
+        var selectedDate = document.getElementById('datePicker').value;
+        saveDatePickerSessionStorage(selectedDate);  
+        updateHeaderDate(selectedDate);
+        fetchAndDisplayClassesAvailable();
+    });
+    
+    
+    function adjustOneDayDate(days) {
+        const currentDate = new Date(datePicker.value + 'T00:00:00');
+        currentDate.setDate(currentDate.getDate() + days);
+        datePicker.value = formatDate(currentDate);
+
+    }
+
+
+    // This script is to refresh when we change the loc
+    var locationOptions = document.querySelectorAll('.location-option');
+    locationOptions.forEach(function(option) {
+        option.addEventListener('click', function() {
+            locationOptions.forEach(function(opt) { opt.classList.remove('selected-option'); });
+            this.classList.add('selected-option');
+            fetchAndDisplayClassesAvailable();
+        });
+    });
+
+    // This script is when we select filter (crossfit / WL / other)
+    var workoutOptions = document.querySelectorAll('.class-option');
+    workoutOptions.forEach(function(option) {
+        option.addEventListener('click', function() {
+            this.classList.toggle('selected-option');
+            fetchAndDisplayClassesAvailable();
+        });
+    });
+
+
+    // This script is to book, cancel a class or show attendees in the tab "book a class"
+    document.getElementById('class-available').addEventListener('click', function(event) {
+        if (event.target && event.target.matches('.cancel-button')) {
+            var memberBookingId = event.target.getAttribute('data-member-booking-id');
+
+            cancelBooking_resolve(memberBookingId).then(() => {
+                // This code will run after the booking has been successfully canceled
+                fetchAndDisplayClassesAvailable();
+            }).catch((error) => {
+                console.error('EventListener - Cancellation error:', error);
+            });
+
+        } else if (event.target && event.target.matches('.book-button')) {
+            bookClass(event.target);
+            fetchAndDisplayClassesAvailable();
+        } else if (event.target && event.target.closest('.booking-item')) {
+            // Check attendees action
+            var bookingItem = event.target.closest('.booking-item');
+
+            // Check if the click is within the attendees div
+            if (event.target.closest('.attendees')) {
+                // Remove the enlarged class from all attendee photos
+                bookingItem.querySelectorAll('.attendee-photo').forEach(function(photo) {
+                    photo.classList.remove('enlarged');
+                });
+                return; // Do nothing else if the click is inside the attendees div
+            }
+
+            // Get the scheduleId, classDate, classTime, and className from either book-button or cancel-button
+            var button = bookingItem.querySelector('.book-button') || bookingItem.querySelector('.cancel-button') || bookingItem.querySelector('.full-button');
+            
+            if (button) {
+                var scheduleId = button.getAttribute('data-class-schedule-id');
+                var classDate = button.getAttribute('data-class-date');
+                var classTime = bookingItem.querySelector('.time').textContent;
+                var className = bookingItem.querySelector('.class-name').textContent;
+
+                var dummyElement = document.createElement('button');
+                dummyElement.setAttribute('data-class-schedule-id', scheduleId);
+                dummyElement.setAttribute('data-class-date', classDate);
+                dummyElement.setAttribute('data-class-time', classTime);
+                dummyElement.setAttribute('data-class-name', className);
+
+                checkAttendees(dummyElement, bookingItem);
+            } else {
+                console.error('No book-button or cancel-button found in booking-item.');
+            }
+        }
+    });
+        // This script is to cancel a class in the tab "next booking"
+        document.getElementById('booking-info').addEventListener('click', function(event) {
+        if (event.target && event.target.matches('.cancel-button')) {
+            var memberBookingId = event.target.getAttribute('data-member-booking-id');
+            cancelBooking_resolve(memberBookingId).then(() => {
+            // This code will run after the booking has been successfully canceled
+            fetchAndisplayClassBooked();
+            }).catch((error) => {
+            console.error('EventListener - Cancellation error:', error);
+            });
+        }
+        });
+    
+
+    // // Click on the closing popup window
+    // document.querySelectorAll('.close-window').forEach(function(element) {
+    //     element.addEventListener('click', function() {
+    //         closePopupAttendees(element.closest('.popup'));
+    //     });
+    // });
+
+    // // Press esc to exit popup
+    // document.addEventListener('keydown', function(event) {
+    //     if (event.key === 'Escape') {
+    //         var popup = document.querySelector('.popup');
+    //         var backdrop = document.querySelector('.backdrop');
+    //         closePopupAttendees(popup, backdrop);
+    //     }
+    // });
+
+    // // Add event listener to close the popup when clicking or touching on the backdrop
+    // document.addEventListener('click', function(event) {
+    //     var backdrop = document.querySelector('.backdrop');
+    //     if (event.target === backdrop) {
+    //         var popup = document.querySelector('.popup');
+    //         closePopupAttendees(popup, backdrop);
+    //     }
+    // });
+
+    // document.addEventListener('touchstart', function(event) {
+    //     var backdrop = document.querySelector('.backdrop');
+    //     if (event.target === backdrop) {
+    //         var popup = document.querySelector('.popup');
+    //         closePopupAttendees(popup, backdrop);
+    //     }
+    // });
+
+    // document.addEventListener('touchend', function(event) {
+    //     var backdrop = document.querySelector('.backdrop');
+    //     if (event.target === backdrop) {
+    //         var popup = document.querySelector('.popup');
+    //         closePopupAttendees(popup, backdrop);
+    //     }
+    // });
+
+
+});
+
+
+// initilaise the date picker on load
+function initDatePicker() {
+  
+    const datePicker = document.getElementById('datePicker');
+    
+    // datePicker.value = storedDate ? storedDate : getLocalDate();
+    // // Save the selected date to local storage
+    // saveDatePickerSessionStorage(datePicker.value);
+
+    // Get the date from local storage if it exists, otherwise use the current local date
+    let storedDate = sessionStorage.getItem('selectedDate');
+    let timestampLastChanged = sessionStorage.getItem('timestampLastChanged');
+
+    
+
+    // Check if there's a stored date and it's within the 30-minute validity period
+    if (storedDate && timestampLastChanged && isWithinValidityPeriod(timestampLastChanged, 0.5)) {
+        datePicker.value = storedDate;
+    } else {
+        currentDate = getLocalDate();
+        datePicker.value = currentDate;
+        // Save the current date and timestamp if there's no valid stored date
+        saveDatePickerSessionStorage(currentDate);
+    }
+
+}
+
+// Check if the stored date is within the specified validity period (in hours)
+function isWithinValidityPeriod(timestampLastChanged, validityPeriodInHours) {
+    const currentTimestamp = new Date().getTime();
+    const hoursDifference = (currentTimestamp - timestampLastChanged) / (1000 * 60 * 60);
+    return hoursDifference <= validityPeriodInHours;
+}
+
+
+// Function to format the date as YYYY-MM-DD
+function formatDate(date) {
+    let d = new Date(date),
+        month = '' + (d.getMonth() + 1),
+        day = '' + d.getDate(),
+        year = d.getFullYear();
+
+    if (month.length < 2) 
+        month = '0' + month;
+    if (day.length < 2) 
+        day = '0' + day;
+
+    return [year, month, day].join('-');
+}
+
+
+
+function updateHeaderDate(dateToDisplay) {
+    const dateHeader = document.getElementById('date-header');
+    if (!dateHeader) {
+      console.error("Element with id 'date-header' not found!");
+      return; // Exit the function if the element doesn't exist
+    }
+
+    // Parse the dateToDisplay to a Date object
+    const displayDate = new Date(dateToDisplay);
+
+    // Get the day, month, and year components
+    const day = displayDate.getDate();
+    const month = displayDate.toLocaleString('en-AU', { month: 'long' });
+    const weekday = displayDate.toLocaleString('en-AU', { weekday: 'long' });
+
+
+    // Function to add the ordinal suffix to the day
+    function getOrdinalSuffix(day) {
+      if (day > 3 && day < 21) return 'th';
+      switch (day % 10) {
+        case 1:  return "st";
+        case 2:  return "nd";
+        case 3:  return "rd";
+        default: return "th";
+      }
+    }
+
+    // Construct the date string with the ordinal suffix
+    const dateString = `${weekday} ${day < 10 ? '0' : ''}${day}${getOrdinalSuffix(day)} ${month}`;
+
+    // Update the content of the 'date-header' element
+    dateHeader.textContent = dateString;
+}
+
+// Function to get the local date considering the timezone offset
+function getLocalDate() {
+  const now = new Date();
+  const timeZoneOffset = now.getTimezoneOffset() * 60000; // offset in milliseconds
+  const localISOTime = new Date(now - timeZoneOffset).toISOString().slice(0,10);
+  return localISOTime;
+}
+
+function saveDatePickerSessionStorage(date) {
+    sessionStorage.setItem('selectedDate', date);
+
+    timestamp = new Date().getTime();
+    sessionStorage.setItem('timestampLastChanged', timestamp);
+}
+
+
+
+
+
+// function bookClass(button) {
+//     var classScheduleId = button.getAttribute('data-class-schedule-id');
+//     var classDateTime = button.getAttribute('data-class-date');
+//     var className = button.getAttribute('data-class-name');
+//     var userId = localStorage.getItem('userId');
+//    // var authToken = localStorage.getItem('authToken'); V1
+//     var accessToken = localStorage.getItem('access_token');
+
+//     var bookUrl = "https://crossfit168.clubfit.net.au/api/v1/booking/book-class-v2";
+//     var data = {
+//         classScheduleId: classScheduleId,
+//         classDateTime: classDateTime,
+//         className: className,
+//         userId: userId,
+//         onBehalfBookingReference: "",
+//         onBehalfBookFor: ""
+//     };
+
+//     var xhr = new XMLHttpRequest();
+//     xhr.open('POST', bookUrl, true);
+//     xhr.setRequestHeader('Content-Type', 'application/json');
+//     xhr.setRequestHeader('Accept', 'application/json');
+//     xhr.setRequestHeader('Authorization', 'Bearer ' + accessToken);
+//     xhr.onload = function() {
+//         if (xhr.status >= 200 && xhr.status < 300) {
+//             fetchAndDisplayClassesAvailable();
+//         } else {
+//             console.error('bookClass - Error while booking:', xhr.status);
+//             errorAPICheckLogin();
+//         }
+//     };
+
+//     xhr.onerror = function() {
+//         console.error('bookClass - Network error while booking');
+//         errorAPICheckLogin();
+//     };
+
+//     xhr.send(JSON.stringify(data));
+// }
+
+
+function bookClass(button) {
+    var classScheduleId = button.getAttribute('data-class-schedule-id');
+    var classDateTime = button.getAttribute('data-class-date');
+    var className = button.getAttribute('data-class-name');
+    var userId = localStorage.getItem('userId');
+    var accessToken = localStorage.getItem('access_token');
+
+    var bookUrl = "https://crossfit168.clubfit.net.au/api/v1/booking/book-class-v2";
+    var data = {
+        classScheduleId: classScheduleId,
+        classDateTime: classDateTime,
+        className: className,
+        userId: userId,
+        onBehalfBookingReference: "",
+        onBehalfBookFor: ""
+    };
+
+    var xhr = new XMLHttpRequest();
+    xhr.open('POST', bookUrl, true);
+    xhr.setRequestHeader('Content-Type', 'application/json');
+    xhr.setRequestHeader('Accept', 'application/json');
+    xhr.setRequestHeader('Authorization', 'Bearer ' + accessToken);
+
+    xhr.onload = function() {
+        var response;
+        try {
+            response = JSON.parse(xhr.responseText);
+        } catch (e) {
+            response = { errors: { message: 'Unknown error occurred' } };
+        }
+
+        if (xhr.status >= 200 && xhr.status < 300 && response.statusCode === 200) {
+            fetchAndDisplayClassesAvailable();
+        } else {
+            console.log("xhr.status: " + xhr.status + "response.messageFields")
+            alert(response.errors.message);
+            errorAPICheckLogin(function(isValid) {
+                if (!isValid) {
+                    console.error('User is not logged in, redirecting to login page.');
+                }
+            });
+        }
+    };
+
+    xhr.onerror = function() {
+        alert('Network error occurred while booking.');
+        errorAPICheckLogin(function(isValid) {
+            if (!isValid) {
+                console.error('User is not logged in, redirecting to login page.');
+            }
+        });
+    };
+
+    xhr.send(JSON.stringify(data));
+}
+
+
+
+
+function displayErrorMessage(button, message) {
+    clearErrorMessage(button); // Clear any previous error message
+    var errorMessage = document.createElement('div');
+    errorMessage.className = 'error-message';
+    errorMessage.textContent = message;
+    button.parentNode.insertBefore(errorMessage, button.nextSibling);
+}
+
+function clearErrorMessage(button) {
+    var nextElement = button.nextSibling;
+    if (nextElement && nextElement.className === 'error-message') {
+        nextElement.remove();
+    }
+}
+
+
+// // Ensure errorAPICheckLogin is defined
+// function errorAPICheckLogin() {
+//     // Add your error handling logic here
+//     console.log('Checking API login status...');
+// }
+
+
+function showInlineAttendees(content, item) {
+    var attendees = item.querySelector('.attendees');
+    if (!attendees) {
+        attendees = document.createElement('div');
+        attendees.className = 'attendees';
+        item.appendChild(attendees);
+        // Ensure the attendees div spans all columns
+        attendees.style.gridColumn = '1 / -1';
+    } else {
+        attendees.style.display = attendees.style.display === 'block' ? 'none' : 'block';
+        return;
+    }
+
+    var attendeeList = '';
+    if (Array.isArray(content) && content.length > 0) {
+        content.sort((a, b) => a.fullName.localeCompare(b.fullName));
+        content.forEach(function(participant) {
+            var firstName = participant.fullName.split(' ')[0];  // Get the first name
+            attendeeList += '<div class="attendee-item"><img src="' + participant.memberPhotoLocation + '" alt="Avatar" class="attendee-photo">' + firstName + '</div>';
+        });
+    } else {
+        attendeeList += '<div>No attendees</div>';
+    }
+    attendees.innerHTML = attendeeList;
+    attendees.style.display = 'block';
+    
+    // Add click event listener for enlarging and reducing image size
+    attendees.querySelectorAll('.attendee-photo').forEach(function(photo) {
+        photo.addEventListener('click', function(event) {
+            if (photo.classList.contains('enlarged')) {
+                photo.classList.remove('enlarged');
+            } else {
+                // Remove enlarged class from any other photo
+                attendees.querySelectorAll('.attendee-photo').forEach(function(p) {
+                    p.classList.remove('enlarged');
+                });
+                photo.classList.add('enlarged');
+            }
+            event.stopPropagation();
+        });
+    });
+
+    // Add click event listener to the attendees div to remove enlarged class from all photos
+    attendees.addEventListener('click', function(event) {
+        attendees.querySelectorAll('.attendee-photo').forEach(function(photo) {
+            photo.classList.remove('enlarged');
+        });
+        event.stopPropagation(); // Prevent collapsing the attendees section
+    });
+
+    // Click outside to reduce enlarged image
+    document.addEventListener('click', function(event) {
+        if (!item.contains(event.target)) {
+            attendees.querySelectorAll('.attendee-photo').forEach(function(photo) {
+                photo.classList.remove('enlarged');
+            });
+        }
+    });
+}
+
+function checkAttendees(button, bookingItem) {
+    var classScheduleId = button.getAttribute('data-class-schedule-id');
+    var selectedDate = button.getAttribute('data-class-date');
+    var classTime = button.getAttribute('data-class-time');
+    // there is no token needed for this API
+    // var accessToken = localStorage.getItem('access_token');
+
+    var checkUrl = "https://crossfit168.clubfit.net.au/api/v1/booking/class-participants";
+    var data = {
+        classScheduleId: classScheduleId,
+        selectedDate: selectedDate,
+        classTime: classTime
+    };
+
+    var xhr = new XMLHttpRequest();
+    xhr.open('POST', checkUrl, true);
+    xhr.setRequestHeader('Content-Type', 'application/json');
+    xhr.setRequestHeader('Accept', 'application/json');
+    // xhr.setRequestHeader('Authorization', 'Bearer ' + accessToken);
+    xhr.setRequestHeader('Authorization', 'bearer');
+    xhr.onload = function() {
+        if (xhr.status >= 200 && xhr.status < 300) {
+            // Parse the JSON response
+            var response = JSON.parse(xhr.responseText);
+            // Extract participants array
+            var participants = response.payload;
+
+            // Display attendees in-line within the booking item
+            showInlineAttendees(participants, bookingItem);
+        } else {
+            console.error('checkAttendees - Error while checking attendees:', xhr.status);
+            errorAPICheckLogin();
+        }
+    };
+
+    xhr.onerror = function() {
+        console.error('checkAttendees - Network error while checking attendees');
+        errorAPICheckLogin();
+    };
+
+    xhr.send(JSON.stringify(data));
+}
+
+
+// function showPopupAttendees(content) {
+//     // Create the popup and backdrop elements
+//     var popup = document.createElement('div');
+//     popup.className = 'popup';
+//     var backdrop = document.createElement('div');
+//     backdrop.className = 'backdrop';
+
+//     // Create the content for the popup
+//     var popupContent = '<span class="close-window">&times;</span><h2>Participants</h2><ul>';
+//     if (Array.isArray(content)) {
+//         content.forEach(function(participant) {
+//             popupContent += '<li>' + participant.fullName + '</li>';
+//         });
+//     } else {
+//         popupContent += '<li>No participants found</li>';
+//     }
+//     popupContent += '</ul>';
+//     popup.innerHTML = popupContent;
+
+//     // Append the elements to the body
+//     document.body.appendChild(popup);
+//     document.body.appendChild(backdrop);
+
+//     // Show the popup
+//     popup.style.display = 'block';
+//     backdrop.style.display = 'block';
+
+//     // Add event listener to close the popup when clicking on the close button
+//     document.querySelectorAll('.close-window').forEach(function(element) {
+//         element.addEventListener('click', function() {
+//             closePopupAttendees(popup, backdrop);
+//         });
+//     });
+// }
+
+// function closePopupAttendees(popup, backdrop) {
+//     if (popup) {
+//         popup.style.display = 'none';
+//         popup.remove();
+//     }
+//     if (backdrop) {
+//         backdrop.style.display = 'none';
+//         backdrop.remove();
+//     }
+// }
+
+// function checkAttendees(button) {
+//     var classScheduleId = button.getAttribute('data-class-schedule-id');
+//     var selectedDate = button.getAttribute('data-class-date');
+//     var classTime = button.getAttribute('data-class-time');
+//     var imageHeight = 300;  // default value
+//     var imageWidth = 500;   // default value
+//     var accessToken = localStorage.getItem('access_token');
+
+//     var checkUrl = "https://crossfit168.clubfit.net.au/api/v1/booking/class-participants";
+//     var data = {
+//         classScheduleId: classScheduleId,
+//         selectedDate: selectedDate,
+//         classTime: classTime,
+//         imageHeight: imageHeight,
+//         imageWidth: imageWidth
+//     };
+
+//     var xhr = new XMLHttpRequest();
+//     xhr.open('POST', checkUrl, true);
+//     xhr.setRequestHeader('Content-Type', 'application/json');
+//     xhr.setRequestHeader('Accept', 'application/json');
+//     xhr.setRequestHeader('Authorization', 'Bearer ' + accessToken);
+//     xhr.onload = function() {
+//         if (xhr.status >= 200 && xhr.status < 300) {
+//             // Parse the JSON response
+//             var response = JSON.parse(xhr.responseText);
+//             // Extract participants array
+//             var participants = response.payload;
+
+//             // Display attendees in a modal
+//             showPopupAttendees(participants);
+//         } else {
+//             console.error('checkAttendees - Error while checking attendees:', xhr.status);
+//             errorAPICheckLogin();
+//         }
+//     };
+
+//     xhr.onerror = function() {
+//         console.error('checkAttendees - Network error while checking attendees');
+//         errorAPICheckLogin();
+//     };
+
+//     xhr.send(JSON.stringify(data));
+// }
+
+
+
+
+// adding a resolve / promise for async function
+function cancelBooking_resolve(memberBookingId, retryAttempt = 0) {
+  return new Promise((resolve, reject) => {
+    var accessToken = localStorage.getItem('access_token');
+    var cancelUrl = `https://crossfit168.clubfit.net.au/api/v1/booking/cancel/${memberBookingId}`;
+
+    var xhr = new XMLHttpRequest();
+    xhr.open('POST', cancelUrl, true);
+    xhr.setRequestHeader('Content-Type', 'application/json');
+    xhr.setRequestHeader('Accept', 'application/json');
+    xhr.setRequestHeader('Authorization', 'Bearer ' + accessToken);
+    xhr.onload = function() {
+      if (xhr.status >= 200 && xhr.status < 300 && response.statusCode === 200) {
+        resolve(xhr.responseText); // Resolve the promise on success
+      } else {
+        console.error('Error while cancelling booking, xhr.status: ', xhr.status);
+        if (retryAttempt < 1) {
+          errorAPICheckLogin(function(retry) {
+            if (retry) {
+              cancelBooking_resolve(memberBookingId, retryAttempt + 1)
+                .then(resolve)
+                .catch(reject);
+            } else {
+              reject(new Error('cancelBooking_resolve - Cancellation failed after retry'));
+            }
+          });
+        } else {
+          reject(new Error('cancelBooking_resolve - Cancellation failed')); // Reject the promise on failure
+        }
+      }
+    };
+
+    xhr.onerror = function() {
+      console.error('cancelBooking_resolve - Network error while cancelling booking');
+      if (retryAttempt < 1) {
+        errorAPICheckLogin(function(retry) {
+          if (retry) {
+            cancelBooking_resolve(memberBookingId, retryAttempt + 1)
+              .then(resolve)
+              .catch(reject);
+          } else {
+            reject(new Error('cancelBooking_resolve- Cancellation failed after network error and retry'));
+          }
+        });
+      } else {
+        reject(new Error('cancelBooking_resolve - Network error')); // Reject the promise on network error
+      }
+    };
+
+    xhr.send('null');
+  });
+}
+
+
+
+
+
+
+// This code is for displaying the class available
+function fetchAndDisplayClassesAvailable() {
+
+
+
+    var selectedLocations = document.querySelectorAll('.location-option.selected-option');
+    if (selectedLocations.length === 0) {
+        console.log('No locations selected.');
+        // alert('Please select at least one location.');
+        return;
+    }
+    
+    var selectedDate = document.getElementById('datePicker').value;
+    
+    // Get the current local date
+    var currentDate = getLocalDate();
+    
+    var locationIdMap = { "ALX": 2, "CBD": 1, "MVL": 4 };
+    var accountId = Array.from(selectedLocations).map(option => {
+        var location = option.getAttribute('data-location');
+        var id = locationIdMap[location];
+        return id;
+    });
+    
+
+    var userId = localStorage.getItem('userId');
+
+    var payload = {
+        "UserId": userId,
+        "clubId": accountId[0],
+        "selectedDate": selectedDate,
+        "classType": 0,
+        "accountId": accountId[0]
+    };
+
+    // Check if the selected date is before the current date
+    if (selectedDate < currentDate) {
+        // Call displayClassAvailable with an empty array to trigger "No class found"
+        displayClassAvailable([]);
+    } else {
+        var searchClassesURL = "https://crossfit168.clubfit.net.au/api/v1/booking/search-classes";
+        makeApiRequest(searchClassesURL, 'POST', payload, function(response) {
+            displayClassAvailable(response.payload);
+        });
+    }
+    
+
+}
+
+
+
+// shows the class available at the bottom of the screen
+function displayClassAvailable(bookings) {
+    var bookingContainer = document.getElementById('class-available');
+    let selectedClassOptions = getSelectedClassOptions();
+
+    let bookingHTML = '';
+    let selectedDate = document.getElementById('datePicker').value;
+
+    if (bookings.length === 0) {
+        bookingHTML = `
+          <div class="booking-item">
+            <div class="class-name">No class found</div>
+          </div>`;
+    } else {
+        const crossFitRegex = /crossfit|cf/i;
+        const weightLiftingRegex = /weightlifting/i;
+
+        let filteredBookings = bookings.filter(booking => {
+            const hasCrossfit = crossFitRegex.test(booking.className);
+            const hasWeightlifting = weightLiftingRegex.test(booking.className);
+
+            if (selectedClassOptions.includes("CrossFit") && hasCrossfit) {
+                return true;
+            }
+
+            if (selectedClassOptions.includes("Weightlifting") && hasWeightlifting) {
+                return true;
+            }
+
+            if (selectedClassOptions.includes("Other") && !hasCrossfit && !hasWeightlifting) {
+                return true;
+            }
+
+            if (selectedClassOptions.length === 0 || selectedClassOptions.length === 3 || selectedClassOptions.includes("All")) {
+                return true;
+            }
+
+            if (selectedClassOptions.length === 2 && !selectedClassOptions.includes("Other")) {
+                return hasCrossfit || hasWeightlifting;
+            }
+
+            return false;
+        });
+
+        if (filteredBookings.length === 0) {
+            bookingHTML = `
+                <div class="booking-item">
+                    <div class="class-name">No class found</div>
+                </div>`;
+        } else {
+          filteredBookings.forEach(booking => {
+              const spotsLeft = booking.classCapacity - booking.totalBooked;
+              const spotText = spotsLeft === 1 ? 'spot' : 'spots';
+
+
+
+              bookingHTML += `
+              <div class="booking-item">
+                  <div class="time">${booking.classTime}</div>
+                  <div class="class-name">${booking.className}</div>
+                  <div class="buttonandavailability">
+                      <div class="action-button" style="margin-left: auto;">
+                          ${
+                              booking.memberBookedStatus === 'Booked'
+                              ? `<button class="cancel-button" 
+                                      data-member-booking-id="${booking.memberBookingId}"
+                                      data-class-schedule-id="${booking.classScheduleId}" 
+                                      data-class-date="${selectedDate}" 
+                                      data-class-name="${booking.className}">Cancel</button>
+                                  <div class="spotsleft">${spotsLeft} ${spotText} left</div>`
+                              : (spotsLeft > 0
+                                  ? `<button class="book-button" 
+                                          data-class-schedule-id="${booking.classScheduleId}" 
+                                          data-class-date="${selectedDate}" 
+                                          data-class-name="${booking.className}">Book</button>
+                                      <div class="spotsleft">${spotsLeft} ${spotText} left</div>`
+                                  : `<button class="full-button"
+                                          data-class-schedule-id="${booking.classScheduleId}" 
+                                          data-class-date="${selectedDate}" 
+                                          data-class-name="${booking.className}">Full</button>`)
+                          }
+                      </div>
+                  </div>
+              </div>`;              
+            //   bookingHTML += `
+            //     <div class="booking-item">
+            //         <div class="time">${booking.classTime}</div>
+            //         <div class="class-name">${booking.className}</div>
+            //         <div class="buttonandavailability">
+            //             <div class="action-button" style="margin-left: auto;">
+            //                 ${
+            //                     booking.memberBookedStatus === 'Booked'
+            //                     ? `<button class="cancel-button" 
+            //                             data-member-booking-id="${booking.memberBookingId}"
+            //                             data-class-schedule-id="${booking.classScheduleId}" 
+            //                             data-class-date="${selectedDate}" 
+            //                             data-class-name="${booking.className}">Cancel</button>
+            //                         <div class="spotsleft">${spotsLeft} ${spotText} left</div>`
+            //                     : (spotsLeft > 0
+            //                         ? `<button class="book-button" 
+            //                                 data-class-schedule-id="${booking.classScheduleId}" 
+            //                                 data-class-date="${selectedDate}" 
+            //                                 data-class-name="${booking.className}">Book</button>
+            //                             <div class="spotsleft">${spotsLeft} ${spotText} left</div>`
+            //                         : `<button class="full-button">Full</button>`)
+            //                 }
+            //             </div>
+            //         </div>
+            //     </div>`;
+
+                       
+          });
+        }
+    }
+
+    bookingContainer.innerHTML = bookingHTML;
+}
+
+
+// // shows the class available at the bottom of the screen
+// function displayClassAvailable(bookings) {
+//     var bookingContainer = document.getElementById('class-available');
+//     let selectedClassOptions = getSelectedClassOptions();
+
+//     let bookingHTML = '';
+//     let selectedDate = document.getElementById('datePicker').value;
+
+//     if (bookings.length === 0) {
+//         bookingHTML = `
+//           <div class="booking-item">
+//             <div class="class-name">No class found</div>
+//           </div>`;
+//     } else {
+//         const crossFitRegex = /crossfit|cf/i;
+//         const weightLiftingRegex = /weightlifting/i;
+
+//         let filteredBookings = bookings.filter(booking => {
+//             const hasCrossfit = crossFitRegex.test(booking.className);
+//             const hasWeightlifting = weightLiftingRegex.test(booking.className);
+
+//             if (selectedClassOptions.includes("CrossFit") && hasCrossfit) {
+//                 return true;
+//             }
+
+//             if (selectedClassOptions.includes("Weightlifting") && hasWeightlifting) {
+//                 return true;
+//             }
+
+//             if (selectedClassOptions.includes("Other") && !hasCrossfit && !hasWeightlifting) {
+//                 return true;
+//             }
+
+//             if (selectedClassOptions.length === 0 || selectedClassOptions.length === 3 || selectedClassOptions.includes("All")) {
+//                 return true;
+//             }
+
+//             if (selectedClassOptions.length === 2 && !selectedClassOptions.includes("Other")) {
+//                 return hasCrossfit || hasWeightlifting;
+//             }
+
+//             return false;
+//         });
+
+//         if (filteredBookings.length === 0) {
+//             bookingHTML = `
+//                 <div class="booking-item">
+//                     <div class="class-name">No class found</div>
+//                 </div>`;
+//         } else {
+        
+//           filteredBookings.forEach(booking => {
+//               const spotsLeft = booking.classCapacity - booking.totalBooked;
+
+//               if (spotsLeft === 0) {
+//                   bookingHTML += `
+//                       <div class="booking-item">
+//                           <div class="time">${booking.classTime}</div>
+//                           <div class="class-name">${booking.className}</div>
+//                           <div class="button-and-availability" style="flex-flow: column; justify-content: center; align-items: flex-end; display: flex;">
+//                               <div class="action-button" style="margin-left: auto;">
+//                                 <button class="full-button">Full</button>
+//                               </div>                          
+//                           </div>
+//                       </div>`;
+//               } else {
+//                   const spotText = spotsLeft === 1 ? 'spot' : 'spots';
+//                   bookingHTML += `
+//                       <div class="booking-item">
+//                           <div class="time">${booking.classTime}</div>
+//                           <div class="class-name">${booking.className}</div>
+//                           <div class="button-and-availability" style="flex-flow: column; justify-content: center; align-items: flex-end; display: flex;">
+//                               <div class="action-button" style="margin-left: auto;">
+//                                   ${
+//                                       booking.memberBookedStatus === 'Booked'
+//                                       ? `<button class="cancel-button" 
+//                                               data-member-booking-id="${booking.memberBookingId}">Cancel</button>
+//                                           <div class="spotsleft">${spotsLeft} ${spotText} left</div>`
+//                                       : `<button class="book-button" 
+//                                               data-class-schedule-id="${booking.classScheduleId}" 
+//                                               data-class-date="${selectedDate}" 
+//                                               data-class-name="${booking.className}">Book</button>
+//                                           <div class="spotsleft">${spotsLeft} ${spotText} left</div>`
+//                                   }
+//                               </div>
+//                           </div>
+//                       </div>`;
+//               }
+//           });
+//         }
+//     }
+
+//     bookingContainer.innerHTML = bookingHTML;
+// }
+
+
+
+function getSelectedClassOptions() {
+    const selectedOptions = document.querySelectorAll('.class-option.selected-option');
+    return Array.from(selectedOptions).map(option => {
+        const textContent = option.textContent.trim();
+        return textContent;
+    });
+}
+
+
+
+
+// shows the class booked at the top of the screen
+function fetchAndisplayClassBooked() {
+    var userId = localStorage.getItem('userId');
+    var apiURL = 'https://crossfit168.clubfit.net.au/api/v1/booking/current/' + userId;
+    makeApiRequest(apiURL, 'GET', null, function(response) {
+        displayMyBookedClass(response.payload);
+    }); 
+}
+
+
+function displayMyBookedClass(bookings) {
+    var bookingContainer = document.getElementById('booking-info'); // Ensure this is the correct ID for your container
+    let bookingHTML = '';
+  
+    
+
+    bookings.forEach(booking => {
+        if (booking.bookingStatus !== "Cancelled") {
+            // console.log(booking)
+            
+            const bookedDateTime = new Date(booking.bookedDate).toLocaleString('en-AU', {
+                weekday: 'short',
+                month: 'short',
+                day: '2-digit',
+                hour: '2-digit',
+                minute: '2-digit'
+            }).replace(',', '');
+
+           
+            const dateInfo = bookedDateTime.split(' ')[0]; // Extract date information
+            const timeInfo = bookedDateTime.split(' ').slice(1).join(' '); // Extract time information
+            const classInfo = `<h3 class="name-class">${booking.className}</h3>`;
+            const timeRow = `<p>${dateInfo} ${timeInfo}</p>`; // Create a row for time
+            const locationRow = `<p>${booking.clubName}</p>`; // Create a row for location
+
+            bookingHTML += `
+              <div class="booked-class-columns">
+                <div class="div-each-class">
+                  <div class="w-richtext">
+                      ${classInfo}
+                      ${timeRow}
+                      ${locationRow}
+                  </div>
+                </div>
+                <div class="action-button">
+                  <button class="cancel-button" data-member-booking-id="${booking.bookedId}">Cancel</button>
+                </div>
+              </div>`;
+
+        }
+    });
+
+    // Check if bookingHTML is still empty after processing all bookings
+    if (!bookingHTML) {
+       bookingHTML = '<div class="booked-class-columns"><div class="div-each-class"><div class="w-richtext"><p>No class available</p></div></div></div>'; // Message to display when there are no bookings
+    }
+    bookingContainer.innerHTML = bookingHTML;
+}
+
+
+function makeApiRequest(url, method, data, callback, retryAttempt = 0) {
+    var accessToken = localStorage.getItem('access_token');
+    var xhr = new XMLHttpRequest();
+    xhr.open(method, url, true);
+    xhr.setRequestHeader('Content-Type', 'application/json');
+    xhr.setRequestHeader('Accept', 'application/json');
+    xhr.setRequestHeader('Authorization', 'Bearer ' + accessToken);
+    xhr.onload = function() {
+        if (xhr.status === 200) {
+            callback(JSON.parse(xhr.responseText));
+        } else {
+            console.error('Error fetching information:', xhr.status);
+            if (retryAttempt < 1) { // Prevent infinite loop, retry only once
+                errorAPICheckLogin(function(retry) {
+                    if (retry) {
+                        makeApiRequest(url, method, data, callback, retryAttempt + 1);
+                    }
+                });
+            } else {
+                console.error('makeApiRequest - Retried request failed:', xhr.status);
+            }
+        }
+    };
+    xhr.onerror = function() {
+        console.error('makeApiRequest - Network error', xhr.onerror);
+
+        if (retryAttempt < 1) { // Prevent infinite loop, retry only once
+          errorAPICheckLogin(function(retry) {
+            if (retry) {
+              makeApiRequest(url, method, data, callback, retryAttempt + 1);
+            }
+          });
+        } else {
+          console.error('makeApiRequest - Retried request failed:', xhr.status);
+        }
+
+    };
+    if (data) {
+        xhr.send(JSON.stringify(data));
+    } else {
+        xhr.send();
+    }
+}
+
+
+
+
+// check login with validate API call
+
+
+
+function errorAPICheckLogin(callback) {
+    console.log('errorAPICheckLogin - function called')
+    validateLogin(function(isValid) {
+        if (isValid) {
+            console.log('errorAPICheckLogin - login validated')
+            callback(true);
+        } else {
+            console.log('errorAPICheckLogin - login not validated')
+            window.location.href = '/';
+        }
+    });
+}
+
+
+
+function validateLogin(callback) {
+    if (!localStorage.getItem('access_token') || !localStorage.getItem('userId') || !localStorage.getItem('userType')) {
+        console.error('validateLogin - Required session storage items are missing');
+        callback(false);
+        return;
+    }
+
+    const url = 'https://admin.clubfit.net.au/api/v1/account/validate';
+    const method = 'POST';
+    const data = {
+        xoken: localStorage.getItem('refresh_token'),
+        userId: localStorage.getItem('portalUserId'),
+        userType: localStorage.getItem('userType')
+    };
+
+    makeApiRequest(url, method, data, function(response) {
+        // Assuming makeApiRequest has already checked for statusCode === 200
+        Object.keys(response.payload).forEach(function(key) {
+            localStorage.setItem(key, response.payload[key]);
+        });
+        callback(true);
+    }, function(response) {
+        console.error('validateLogin - Validation failed:', response);
+        callback(false);
+    });
+}
